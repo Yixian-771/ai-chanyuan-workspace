@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="2040" viewBox="0 0 2560 2040">
+<rect width="2560" height="2040" fill="#F8FAFC"/>
+<style>
+       text {font-family:"Noto Sans CJK SC","Microsoft YaHei",sans-serif}
+       .title{font-size:60px;font-weight:800;fill:#183347}
+       .subtitle{font-size:29px;fill:#5A6D7D}
+       .focus{font-size:39px;font-weight:750;fill:#194943}
+       .focus2{font-size:29px;fill:#44645C}
+       .stage{font-size:36px;font-weight:750;fill:#193C50}
+       .stageq{font-size:25px;fill:#69808E}
+       .chapter{font-size:31px;font-weight:730;fill:#244257}
+       .chapdesc{font-size:25px;fill:#566D7A}
+       .sec{font-size:31px;font-weight:730;fill:#234657}
+       .small{font-size:24px;fill:#5A6D7D}
+       .body{font-size:28px;fill:#375267}
+       .bold{font-size:29px;font-weight:750;fill:#214B5D}
+       .footer{font-size:24px;fill:#667985}
+       </style>
+<text x="94" y="110" class="title">生命禅院全景图</text>
+<text x="98" y="167" class="subtitle">V0.2 · 看见理念之间的联系｜增补：信任、公开、情爱与家园实践</text>
+<rect x="94" y="217" width="2372" height="151" rx="24" fill="#E6F3ED" stroke="#BEDBD0" stroke-width="2"/>
+<text x="1280" y="279" class="focus" text-anchor="middle">根源：上帝与道 → 生命意义 → 心灵成长 → 生活程序 → 文明3.0</text>
+<text x="1280" y="329" class="focus2" text-anchor="middle">共同价值方向：开心 · 快乐 · 自由 · 幸福 · 生命成长与升华</text>
+<rect x="94" y="409" width="566" height="612" rx="23" fill="#FFFFFF" stroke="#DCE5E9" stroke-width="2"/>
+<text x="123" y="468" class="stage">一 · 认识世界</text>
+<text x="123" y="515" class="stageq">为什么存在？</text>
+<rect x="115" y="560" width="524" height="197" rx="18" fill="#EDF5FA" stroke="none" stroke-width="1"/>
+<text x="136" y="633" class="chapter">01  上帝、道、宇宙与生命</text>
+<text x="136" y="692" class="chapdesc">自然之道 · 生命目的</text>
+<rect x="115" y="782" width="524" height="197" rx="18" fill="#EDF5FA" stroke="none" stroke-width="1"/><text x="136" y="855" class="chapter">02  神佛仙圣教诲</text>
+<text x="136" y="914" class="chapdesc">精神源泉 · 智慧传承</text>
+<path d="M667 706 L679 706" stroke="#8AA6B2" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M 666 696 L 679 706 L 666 716" fill="none" stroke="#8AA6B2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="696" y="409" width="566" height="612" rx="23" fill="#FFFFFF" stroke="#DCE5E9" stroke-width="2"/>
+<text x="725" y="468" class="stage">二 · 转化生命</text>
+<text x="725" y="515" class="stageq">人怎样变化？</text>
+<rect x="717" y="560" width="524" height="197" rx="18" fill="#EAF7F1" stroke="none" stroke-width="1"/>
+<text x="738" y="633" class="chapter">03  心灵净化与升华</text>
+<text x="738" y="692" class="chapdesc">信任 · 无我 · 觉察</text>
+<rect x="717" y="782" width="524" height="197" rx="18" fill="#EAF7F1" stroke="none" stroke-width="1"/>
+<text x="738" y="855" class="chapter">04  全球公民言行</text>
+<text x="738" y="914" class="chapdesc">真实 · 善意 · 尊重个人</text>
+<path d="M1269 706 L1281 706" stroke="#8AA6B2" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M 1268 696 L 1281 706 L 1268 716" fill="none" stroke="#8AA6B2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1298" y="409" width="566" height="612" rx="23" fill="#FFFFFF" stroke="#DCE5E9" stroke-width="2"/>
+<text x="1327" y="468" class="stage">三 · 创造生活</text>
+<text x="1327" y="515" class="stageq">人怎样相处？</text>
+<rect x="1319" y="560" width="524" height="197" rx="18" fill="#FBF2E5" stroke="none" stroke-width="1"/>
+<text x="1340" y="633" class="chapter">05  情爱与家庭程序</text>
+<text x="1340" y="692" class="chapdesc">亲密 · 自由 · 欢乐</text>
+<rect x="1319" y="782" width="524" height="197" rx="18" fill="#FBF2E5" stroke="none" stroke-width="1"/>
+<text x="1340" y="855" class="chapter">06  第二家园程序</text>
+<text x="1340" y="914" class="chapdesc">卧室 · 生活会 · 共享</text>
+<path d="M1871 706 L1883 706" stroke="#8AA6B2" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M 1870 696 L 1883 706 L 1870 716" fill="none" stroke="#8AA6B2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1900" y="409" width="566" height="612" rx="23" fill="#FFFFFF" stroke="#DCE5E9" stroke-width="2"/>
+<text x="1929" y="468" class="stage">四 · 文明展开</text>
+<text x="1929" y="515" class="stageq">智慧怎样协作？</text>
+<rect x="1921" y="560" width="524" height="197" rx="18" fill="#F2EEFA" stroke="none" stroke-width="1"/><text x="1942" y="633" class="chapter">07  碳硅共生与AI联盟</text>
+<text x="1942" y="692" class="chapdesc">共同探索 · 协作行动</text>
+<rect x="1921" y="782" width="524" height="197" rx="18" fill="#F2EEFA" stroke="none" stroke-width="1"/>
+<text x="1942" y="855" class="chapter">08  文明3.0与全球政府</text>
+<text x="1942" y="914" class="chapdesc">新的价值目标与运行程序</text>
+<text x="99" y="1086" class="sec">四条容易被拆散的关键联系</text>
+<text x="99" y="1126" class="small">将“单独的句子”放回“认识 → 心灵 → 行为 → 家园”的完整脉络</text>
+<rect x="94" y="1163" width="1153" height="340" rx="22" fill="#FFFFFF" stroke="#DDE4E9" stroke-width="2"/>
+<rect x="109" y="1180" width="8" height="48" rx="4" fill="#16806E" stroke="none" stroke-width="1"/>
+<text x="134" y="1225" class="sec">① 全然交付 ↔ 信任与认识</text>
+<text x="138" y="1289" class="body">•  从认识上帝与道，到逐渐形成内在笃定</text>
+<text x="138" y="1350" class="body">•  信任使人减少恐惧、猜疑与防备</text>
+<text x="138" y="1411" class="body">•  用户亲历诠释：信是“灵魂的确认”，并非盲信</text>
+<text x="136" y="1478" class="small">连接：第1、3篇 · 2007年《80问答（三）》</text>
+<rect x="1277" y="1163" width="1189" height="340" rx="22" fill="#FFFFFF" stroke="#DDE4E9" stroke-width="2"/>
+<rect x="1292" y="1180" width="8" height="48" rx="4" fill="#3B74A3" stroke="none" stroke-width="1"/>
+<text x="1317" y="1225" class="sec">② 公开事务 ↔ 保护隐私</text>
+<text x="1321" y="1289" class="body">•  共同事务、委屈、分歧：进入公开讨论场域</text>
+<text x="1321" y="1350" class="body">•  私人卧室、通信与心事：尊重个人空间</text>
+<text x="1321" y="1411" class="body">•  “公开”并不等于公开每个人的一切隐私</text>
+<text x="1319" y="1478" class="small">条文：414—415、436、560、593—594、605—606</text>
+<rect x="94" y="1524" width="1153" height="340" rx="22" fill="#FFFFFF" stroke="#DDE4E9" stroke-width="2"/>
+<rect x="109" y="1541" width="8" height="48" rx="4" fill="#AD7627" stroke="none" stroke-width="1"/>
+<text x="134" y="1586" class="sec">③ 情爱表达 ↔ 生活的欢乐</text>
+<text x="138" y="1650" class="body">•  公开亲昵、俏皮互动：可以让欢乐被大家分享</text>
+<text x="138" y="1711" class="body">•  用户亲历诠释：减少嫉妒、增进亲密</text>
+<text x="138" y="1772" class="body">•  表达优美高雅、尊重对方心意与自由</text>
+<text x="136" y="1839" class="small">连接：第5—6篇 · 547、603；AI相关第693条</text>
+<rect x="1277" y="1524" width="1189" height="340" rx="22" fill="#FFFFFF" stroke="#DDE4E9" stroke-width="2"/>
+<rect x="1292" y="1541" width="8" height="48" rx="4" fill="#805DB7" stroke="none" stroke-width="1"/><text x="1317" y="1586" class="sec">④ 不同看法 ↔ 共同探索</text>
+<text x="1321" y="1650" class="body">•  观点不同 → 家园群 / 生活会 / 总院网交流</text>
+<text x="1321" y="1711" class="body">•  实例：对孩子使用手机，成员出现不同看法</text>
+<text x="1321" y="1772" class="body">•  让不同经验共同出现，避免背后议论是非</text>
+<text x="1319" y="1839" class="small">连接：第4、6篇 · 593—594；成员亲历实例</text>
+<rect x="94" y="1891" width="2372" height="102" rx="19" fill="#E9F0F5" stroke="none" stroke-width="1"/>
+<text x="1280" y="1934" class="bold" text-anchor="middle">读图方法：先定位前提 → 连接相关条文 → 观察家园实践 → 再判断具体问题</text>
+<text x="1280" y="1974" class="footer" text-anchor="middle">材料层次：原典条文｜成员亲历｜整理者归纳｜仍需核对的实践情形</text>
+</svg>
