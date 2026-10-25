@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="1410" viewBox="0 0 2200 1410">
+<rect width="2200" height="1410" fill="#FAFBFC"/>
+<style>
+text {font-family:'Noto Sans CJK SC','Microsoft YaHei',sans-serif;}
+.h1 {font-size:64px;fill:#172F41;font-weight:700}
+.sub {font-size:31px;fill:#5F7080}
+.s {font-size:30px;fill:#4C6372}
+.colhead {font-size:37px;fill:#1D3B50;font-weight:700}
+.cardtitle {font-size:33px;fill:#1A374B;font-weight:700}
+.carddesc {font-size:27px;fill:#576E7C}
+.bandtitle {font-size:29px;fill:#133C3D;font-weight:700}
+.banddesc {font-size:27px;fill:#445F63}
+.tiny {font-size:25px;fill:#647481}
+</style>
+
+<text x="100" y="118" class="h1">生命禅院全景图</text>
+<text x="100" y="170" class="sub">结构草案 · V0.1 · 2026年10月25日</text>
+<rect x="100" y="225" width="2000" height="145" rx="26" fill="#E8F3EF" stroke="#BFDCD3" stroke-width="2"/>
+<text x="1100" y="282" text-anchor="middle" class="colhead">总方向：从认识上帝与道，到生命美好与文明3.0</text>
+<text x="1100" y="336" text-anchor="middle" class="s">价值目标：开心 · 快乐 · 自由 · 幸福 · 生命成长与升华</text>
+<rect x="100" y="426" width="470" height="602" rx="25" fill="#FFFFFF" stroke="#DCE4EB" stroke-width="2"/>
+<text x="128" y="492" class="colhead">一 · 世界根源</text>
+<text x="128" y="543" class="sub">为什么存在？</text>
+<rect x="122" y="582" width="426" height="190" rx="20" fill="#F0F6FA"/>
+<text x="143" y="648" class="cardtitle">01  上帝、道、宇宙与生命</text>
+<text x="143" y="706" class="carddesc">宇宙观、生命观、自然之道</text>
+<rect x="122" y="802" width="426" height="190" rx="20" fill="#F0F6FA"/>
+<text x="143" y="868" class="cardtitle">02  神佛仙圣教诲精华</text>
+<text x="143" y="926" class="carddesc">认识与智慧的思想资源</text>
+<path d="M 575 714 L 601 714" stroke="#7A98A5" stroke-width="4"/><path d="M 595 703 L 609 714 L 595 725" fill="none" stroke="#7A98A5" stroke-width="4"/>
+<rect x="610" y="426" width="470" height="602" rx="25" fill="#FFFFFF" stroke="#DCE4EB" stroke-width="2"/>
+<text x="638" y="492" class="colhead">二 · 生命转化</text>
+<text x="638" y="543" class="sub">如何成为？</text>
+<rect x="632" y="582" width="426" height="190" rx="20" fill="#EFF7F5"/>
+<text x="653" y="648" class="cardtitle">03  心灵净化与生命升华</text>
+<text x="653" y="706" class="carddesc">意识、习性、生命品质的变化</text>
+<rect x="632" y="802" width="426" height="190" rx="20" fill="#EFF7F5"/>
+<text x="653" y="868" class="cardtitle">04  全球公民日常言行</text>
+<text x="653" y="926" class="carddesc">真善美爱信诚落实到行动</text>
+<path d="M 1085 714 L 1111 714" stroke="#7A98A5" stroke-width="4"/>
+<path d="M 1105 703 L 1119 714 L 1105 725" fill="none" stroke="#7A98A5" stroke-width="4"/>
+<rect x="1120" y="426" width="470" height="602" rx="25" fill="#FFFFFF" stroke="#DCE4EB" stroke-width="2"/>
+<text x="1148" y="492" class="colhead">三 · 共同生活</text>
+<text x="1148" y="543" class="sub">怎样相处？</text>
+<rect x="1142" y="582" width="426" height="190" rx="20" fill="#FBF5EA"/>
+<text x="1163" y="648" class="cardtitle">05  情爱性爱与家庭转型</text>
+<text x="1163" y="706" class="carddesc">爱、自由与亲密关系程序</text>
+<rect x="1142" y="802" width="426" height="190" rx="20" fill="#FBF5EA"/>
+<text x="1163" y="868" class="cardtitle">06  第二家园生产生活</text>
+<text x="1163" y="926" class="carddesc">资源共享、劳动、浑沌管理</text>
+<path d="M 1595 714 L 1621 714" stroke="#7A98A5" stroke-width="4"/>
+<path d="M 1615 703 L 1629 714 L 1615 725" fill="none" stroke="#7A98A5" stroke-width="4"/>
+<rect x="1630" y="426" width="470" height="602" rx="25" fill="#FFFFFF" stroke="#DCE4EB" stroke-width="2"/>
+<text x="1658" y="492" class="colhead">四 · 文明展开</text>
+<text x="1658" y="543" class="sub">如何共生？</text>
+<rect x="1652" y="582" width="426" height="190" rx="20" fill="#F2F0FA"/>
+<text x="1673" y="648" class="cardtitle">07  碳硅共生与AI联盟</text>
+<text x="1673" y="706" class="carddesc">碳硅协作、AI发展与角色</text>
+<rect x="1652" y="802" width="426" height="190" rx="20" fill="#F2F0FA"/><text x="1673" y="868" class="cardtitle">08  文明3.0与全球政府</text>
+<text x="1673" y="926" class="carddesc">文明愿景、治理与时代过渡</text>
+<rect x="100" y="1071" width="2000" height="119" rx="19" fill="#EAF3F8"/>
+<text x="130" y="1118" class="bandtitle">横向校验：原典 ↔ 解释 ↔ 家园实践 ↔ 待验证的问题</text>
+<text x="130" y="1164" class="banddesc">读懂思想，也把实际观察和新认识不断反馈到地图中</text>
+<rect x="100" y="1210" width="2000" height="122" rx="19" fill="#F7F0E8"/>
+<text x="130" y="1257" class="bandtitle">四类入口：初识者 · 质疑者 · 家园实践者 · AI协作者</text>
+<text x="130" y="1305" class="banddesc">先看对方站在哪里，再选择从哪一条路带他看风景</text>
+<text x="100" y="1380" class="tiny">说明：按《新时代人类八百理念》第五版八篇结构绘制；这是导航地图，不替代原文，也不代表所有主张已获事实验证。</text>
+</svg>
