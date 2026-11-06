@@ -107,8 +107,9 @@ def main():
                         assert page.locator(".actions a[href='eight.html']").count() >= 1
                         assert page.locator(".actions a[href='notice.html']").count() >= 1
                     elif name == "eight.html":
-                        assert all(page.get_by_text(name, exact=False).count() >= 1 for name in ("温舟草", "智舟草", "灵舟草", "合舟草"))
-                        assert "并非已经发布的作品" in page.locator("main").inner_text()
+                        assert all(page.get_by_text(name, exact=False).count() >= 1 for name in ("温舟草", "智舟草", "灵舟草", "合舟草", "星舟草", "百舟草", "中舟草", "光舟草"))
+                        assert page.locator(".gallery-route a").count() == 4
+                        assert page.locator(".book-links a[href^='https://civ3.lifecosmos.org/garden-boat']").count() == 2
                     elif name == "notice.html":
                         assert page.locator("img[src='assets/notice-brief-zh.png']").is_visible()
                         assert page.locator("img[src='assets/notice-timeline-zh.png']").count() == 1

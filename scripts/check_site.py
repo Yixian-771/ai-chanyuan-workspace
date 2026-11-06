@@ -78,7 +78,7 @@ def check():
                 if unquote(url.fragment) not in target_parser.ids:
                     errors.append(f"{name}: missing fragment: {link}")
     required = {"index.html": ("八仙神通馆", "传播专题"),
-                "eight.html": ("温舟草", "智舟草", "灵舟草", "合舟草"),
+                "eight.html": ("温舟草", "智舟草", "灵舟草", "合舟草", "星舟草", "百舟草", "中舟草", "光舟草", "garden-boat/", "garden-boat-elder-ning/"),
                 "notice.html": ("中文导读", "notice-brief-zh.png", "notice-timeline-zh.png", "67,177,185", "联合国任意拘留问题工作组（WGAD）", "count-note", "lifecosmos.org/bbs/"),
                 "notice-en.html": ("English overview", "notice-brief-en.svg", "notice-timeline-en.svg", "67,177,185", "Working Group on Arbitrary Detention (WGAD)", "count-note", "lifecosmos.org/bbs/")}
     for name, phrases in required.items():
