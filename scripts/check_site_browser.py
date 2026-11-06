@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check the three pages in clean Chromium contexts at the Pages subpath.
+"""Check the four pages in clean Chromium contexts at the Pages subpath.
 
 Requires Playwright only for acceptance checks, never for the website itself.
 Without --base-url, serves docs/ locally at /ai-chanyuan-workspace/.
@@ -20,7 +20,7 @@ from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
 PREFIX = "/ai-chanyuan-workspace/"
-PAGES = ("index.html", "eight.html", "notice.html")
+PAGES = ("index.html", "eight.html", "notice.html", "notice-en.html")
 
 
 class SiteHandler(SimpleHTTPRequestHandler):
@@ -109,9 +109,16 @@ def main():
                     elif name == "eight.html":
                         assert all(page.get_by_text(name, exact=False).count() >= 1 for name in ("温舟草", "智舟草", "灵舟草", "合舟草"))
                         assert "并非已经发布的作品" in page.locator("main").inner_text()
+                    elif name == "notice.html":
+                        assert page.locator("img[src='assets/notice-brief-zh.png']").is_visible()
+                        assert page.locator("img[src='assets/notice-timeline-zh.png']").count() == 1
+                        assert page.locator("a[href='notice-en.html']").count() >= 1
+                        assert page.locator("a[href^='https://smcy.xyz/']").count() == 1
                     else:
-                        assert page.locator(".english[lang=en]").is_visible()
-                        assert "不是通告全文译文" in page.locator("main").inner_text()
+                        assert page.locator("html").get_attribute("lang") == "en"
+                        assert page.locator("img[src='assets/notice-brief-en.svg']").is_visible()
+                        assert page.locator("img[src='assets/notice-timeline-en.svg']").count() == 1
+                        assert page.locator("a[href='notice.html']").count() >= 1
                         assert page.locator("a[href^='https://smcy.xyz/']").count() == 1
                     a11y = None
                     if args.axe_path:
@@ -148,7 +155,7 @@ def main():
             server.shutdown()
         report["status"] = "FAIL" if report["errors"] else "PASS"
         (output / "results.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")
-    print(f"{report['status']}: {len(report['results'])}/6 page/viewport checks; evidence: {output}")
+    print(f"{report['status']}: {len(report['results'])}/8 page/viewport checks; evidence: {output}")
     for error in report["errors"]:
         print(error)
     return bool(report["errors"])

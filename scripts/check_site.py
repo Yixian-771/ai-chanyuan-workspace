@@ -6,7 +6,7 @@ from urllib.parse import unquote, urlsplit
 import sys
 
 SITE = (Path(__file__).resolve().parents[1] / "docs").resolve()
-PAGES = ["index.html", "eight.html", "notice.html"]
+PAGES = ["index.html", "eight.html", "notice.html", "notice-en.html"]
 
 class Links(HTMLParser):
     def __init__(self):
@@ -45,8 +45,9 @@ def check():
         data = source.read_text(encoding="utf-8")
         parser = Links()
         parser.feed(data)
-        if parser.lang != "zh-CN" or parser.titles != 1:
-            errors.append(f"{name}: expected lang=zh-CN and one <title>")
+        expected_lang = "en" if name == "notice-en.html" else "zh-CN"
+        if parser.lang != expected_lang or parser.titles != 1:
+            errors.append(f"{name}: expected lang={expected_lang} and one <title>")
         if not parser.viewport:
             errors.append(f"{name}: missing viewport")
         errors.extend(f"{name}: {error}" for error in parser.errors)
@@ -78,7 +79,8 @@ def check():
                     errors.append(f"{name}: missing fragment: {link}")
     required = {"index.html": ("八仙神通馆", "传播专题"),
                 "eight.html": ("温舟草", "智舟草", "灵舟草", "合舟草"),
-                "notice.html": ("中文导读", "English overview", "67,177,185")}
+                "notice.html": ("中文导读", "notice-brief-zh.png", "notice-timeline-zh.png", "67,177,185"),
+                "notice-en.html": ("English overview", "notice-brief-en.svg", "notice-timeline-en.svg", "67,177,185")}
     for name, phrases in required.items():
         p = SITE / name
         if p.exists():
@@ -90,7 +92,7 @@ def check():
         for e in errors:
             print("FAIL:", e, file=sys.stderr)
         return 1
-    print("PASS: local files, fragments, HTTPS links, metadata and content in all 3 pages")
+    print("PASS: local files, fragments, HTTPS links, metadata and content in all 4 pages")
     return 0
 
 if __name__ == "__main__":
