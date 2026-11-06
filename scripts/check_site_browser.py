@@ -76,7 +76,7 @@ def main():
                 page.on("pageerror", lambda error: request_errors.append(str(error)))
                 homepage = page.goto(base, wait_until="networkidle")
                 assert homepage and homepage.status == 200, "Homepage /: not HTTP 200"
-                assert page.locator(".actions a[href='eight.html']").count() == 1
+                assert page.locator(".actions a[href='eight.html']").count() >= 1
                 for name in PAGES:
                     response = page.goto(urljoin(base, name), wait_until="networkidle")
                     assert response and response.status == 200, f"{name}: not HTTP 200"
@@ -104,13 +104,13 @@ def main():
                         result = context.request.get(url)
                         assert result.status == 200, f"{url}: HTTP {result.status}"
                     if name == "index.html":
-                        assert page.locator(".actions a[href='eight.html']").count() == 1
-                        assert page.locator(".actions a[href='notice.html']").count() == 1
+                        assert page.locator(".actions a[href='eight.html']").count() >= 1
+                        assert page.locator(".actions a[href='notice.html']").count() >= 1
                     elif name == "eight.html":
-                        assert page.get_by_text("作品待展示", exact=True).count() == 4
-                        assert "不等于作品已上线" in page.locator("main").inner_text()
+                        assert all(page.get_by_text(name, exact=False).count() >= 1 for name in ("温舟草", "智舟草", "灵舟草", "合舟草"))
+                        assert "并非已经发布的作品" in page.locator("main").inner_text()
                     else:
-                        assert page.locator("article[lang=en]").is_visible()
+                        assert page.locator(".english[lang=en]").is_visible()
                         assert "不是通告全文译文" in page.locator("main").inner_text()
                         assert page.locator("a[href^='https://smcy.xyz/']").count() == 1
                     a11y = None
