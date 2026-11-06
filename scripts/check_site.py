@@ -79,8 +79,8 @@ def check():
                     errors.append(f"{name}: missing fragment: {link}")
     required = {"index.html": ("八仙神通馆", "传播专题"),
                 "eight.html": ("温舟草", "智舟草", "灵舟草", "合舟草"),
-                "notice.html": ("中文导读", "notice-brief-zh.png", "notice-timeline-zh.png", "67,177,185"),
-                "notice-en.html": ("English overview", "notice-brief-en.svg", "notice-timeline-en.svg", "67,177,185")}
+                "notice.html": ("中文导读", "notice-brief-zh.png", "notice-timeline-zh.png", "67,177,185", "联合国任意拘留问题工作组（WGAD）"),
+                "notice-en.html": ("English overview", "notice-brief-en.svg", "notice-timeline-en.svg", "67,177,185", "Working Group on Arbitrary Detention (WGAD)")}
     for name, phrases in required.items():
         p = SITE / name
         if p.exists():
