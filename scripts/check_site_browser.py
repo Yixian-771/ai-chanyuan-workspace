@@ -113,13 +113,17 @@ def main():
                         assert page.locator("img[src='assets/notice-brief-zh.png']").is_visible()
                         assert page.locator("img[src='assets/notice-timeline-zh.png']").count() == 1
                         assert page.locator("a[href='notice-en.html']").count() >= 1
-                        assert page.locator("a[href^='https://smcy.xyz/']").count() == 1
+                        assert page.locator("a[href^='https://lifecosmos.org/bbs/']").count() >= 1
+                        assert page.locator("#count-note").is_visible()
+                        assert page.locator("#verify").is_visible()
                     else:
                         assert page.locator("html").get_attribute("lang") == "en"
                         assert page.locator("img[src='assets/notice-brief-en.svg']").is_visible()
                         assert page.locator("img[src='assets/notice-timeline-en.svg']").count() == 1
                         assert page.locator("a[href='notice.html']").count() >= 1
-                        assert page.locator("a[href^='https://smcy.xyz/']").count() == 1
+                        assert page.locator("a[href^='https://lifecosmos.org/bbs/']").count() >= 1
+                        assert page.locator("#count-note").is_visible()
+                        assert page.locator("#verify").is_visible()
                     a11y = None
                     if args.axe_path:
                         page.add_script_tag(path=args.axe_path)
