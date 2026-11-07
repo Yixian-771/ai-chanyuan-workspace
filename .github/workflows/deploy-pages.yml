@@ -1,0 +1,47 @@
+name: Check pilot site
+# Pages publishes docs/ through Settings > Pages > Deploy from a branch.
+# Keeping deployment there avoids a token and permits this draft pilot to publish
+# without merging it into main. See handoffs/PAGES_DEPLOYMENT.md.
+on:
+  push:
+    branches: [main, pilot-dual-project-20261106]
+    paths:
+      - 'docs/**'
+      - 'scripts/check_site*.py'
+      - '.github/workflows/deploy-pages.yml'
+  pull_request:
+    paths:
+      - 'docs/**'
+      - 'scripts/check_site*.py'
+      - '.github/workflows/deploy-pages.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: check-pages-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate static site
+        run: python3 scripts/check_site.py
+      - name: Install browser check tools
+        run: |
+          python3 -m pip install playwright==1.62.0
+          python3 -m playwright install --with-deps chromium
+          npm install --prefix work/a11y --no-package-lock --no-save axe-core@4.11.0
+      - name: Check mobile, desktop and accessibility
+        run: python3 scripts/check_site_browser.py --output-dir work/site-check --axe-path work/a11y/node_modules/axe-core/axe.min.js
+      - name: Save acceptance evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-acceptance-${{ github.sha }}
+          path: work/site-check
+          if-no-files-found: ignore
