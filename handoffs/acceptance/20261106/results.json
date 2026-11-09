@@ -1,0 +1,120 @@
+{
+  "checked_at_utc": "2026-11-05T23:53:51.007289+00:00",
+  "base_url": "http://127.0.0.1:42061/ai-chanyuan-workspace/",
+  "public_site": false,
+  "playwright": "1.62.0",
+  "results": [
+    {
+      "page": "index.html",
+      "viewport": 375,
+      "http_status": 200,
+      "homepage_status": 200,
+      "dimensions": {
+        "scroll": 375,
+        "client": 375,
+        "body": 375
+      },
+      "local_resources": 5,
+      "keyboard_skip": "PASS",
+      "axe": {
+        "version": "4.11.0",
+        "violations": []
+      },
+      "request_errors": []
+    },
+    {
+      "page": "eight.html",
+      "viewport": 375,
+      "http_status": 200,
+      "homepage_status": 200,
+      "dimensions": {
+        "scroll": 375,
+        "client": 375,
+        "body": 375
+      },
+      "local_resources": 5,
+      "keyboard_skip": "PASS",
+      "axe": {
+        "version": "4.11.0",
+        "violations": []
+      },
+      "request_errors": []
+    },
+    {
+      "page": "notice.html",
+      "viewport": 375,
+      "http_status": 200,
+      "homepage_status": 200,
+      "dimensions": {
+        "scroll": 375,
+        "client": 375,
+        "body": 375
+      },
+      "local_resources": 5,
+      "keyboard_skip": "PASS",
+      "axe": {
+        "version": "4.11.0",
+        "violations": []
+      },
+      "request_errors": []
+    },
+    {
+      "page": "index.html",
+      "viewport": 1366,
+      "http_status": 200,
+      "homepage_status": 200,
+      "dimensions": {
+        "scroll": 1366,
+        "client": 1366,
+        "body": 1366
+      },
+      "local_resources": 5,
+      "keyboard_skip": "PASS",
+      "axe": {
+        "version": "4.11.0",
+        "violations": []
+      },
+      "request_errors": []
+    },
+    {
+      "page": "eight.html",
+      "viewport": 1366,
+      "http_status": 200,
+      "homepage_status": 200,
+      "dimensions": {
+        "scroll": 1366,
+        "client": 1366,
+        "body": 1366
+      },
+      "local_resources": 5,
+      "keyboard_skip": "PASS",
+      "axe": {
+        "version": "4.11.0",
+        "violations": []
+      },
+      "request_errors": []
+    },
+    {
+      "page": "notice.html",
+      "viewport": 1366,
+      "http_status": 200,
+      "homepage_status": 200,
+      "dimensions": {
+        "scroll": 1366,
+        "client": 1366,
+        "body": 1366
+      },
+      "local_resources": 5,
+      "keyboard_skip": "PASS",
+      "axe": {
+        "version": "4.11.0",
+        "violations": []
+      },
+      "request_errors": []
+    }
+  ],
+  "errors": [],
+  "browser": "155.0.8059.79",
+  "status": "PASS",
+  "source_commit": "fa4b3941ede3bbadf9a3c28bce79c641ef1b69d5"
+}
