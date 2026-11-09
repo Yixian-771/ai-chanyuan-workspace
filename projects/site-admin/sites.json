@@ -1,0 +1,13 @@
+{
+  "sites": {
+    "lifecosmos-bbs": {
+      "name": "生命禅院论坛",
+      "engine": "discuz",
+      "base_url": "https://lifecosmos.org/bbs/",
+      "forums": {
+        "八仙过海各显神通": 426,
+        "专题事件": 427
+      }
+    }
+  }
+}
