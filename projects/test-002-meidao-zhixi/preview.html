@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>美到窒息 · Breathtakingly Beautiful — 图文预览稿 v0.4.1 / Illustrated preview draft</title>
+<style>
+:root{--ink:#2f3a34;--soft:#66726b;--bg:#f7f5ef;--card:#fffdf8;--line:#e3ded2;--accent:#5f8a6b;--ai:#7a5aa6}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Noto Serif SC","Songti SC","Source Han Serif SC",Georgia,serif;color:var(--ink);background:var(--bg);line-height:1.85}
+body.zh .en,body.en .zh{display:none}
+.bar{position:sticky;top:0;background:rgba(247,245,239,.96);border-bottom:1px solid var(--line);padding:.45rem 1rem;display:flex;justify-content:space-between;align-items:center;gap:.6rem;font-family:system-ui,sans-serif;font-size:.8rem;z-index:5}
+.draft{color:#a0522d}
+.bar button{border:1px solid var(--accent);background:var(--card);color:var(--ink);padding:.2rem .8rem;border-radius:999px;cursor:pointer;margin-left:.3rem;font-size:.8rem}
+.bar button.on{background:var(--accent);color:#fff}
+.hero{position:relative;margin:0}
+.hero img{display:block;width:100%;height:78vh;min-height:420px;max-height:820px;object-fit:cover}
+.hero .over{position:absolute;inset:auto 0 0 0;padding:4rem 1.2rem 2rem;background:linear-gradient(transparent,rgba(10,25,20,.72));color:#fff;text-align:center}
+.hero h1{font-size:clamp(2.2rem,7vw,4rem);letter-spacing:.18em;margin:0;font-weight:500;text-shadow:0 2px 12px rgba(0,0,0,.4)}
+.hero .sub{font-size:clamp(1rem,2.6vw,1.3rem);opacity:.95}
+.herocap{max-width:1040px;margin:.4rem auto 0;padding:0 1.2rem}
+main{max-width:1040px;margin:0 auto;padding:0 1.2rem 4rem}
+.lead{max-width:760px;margin:2.2rem auto;font-size:1.12rem}
+h2{font-weight:500;font-size:1.6rem;margin:4rem 0 .4rem;letter-spacing:.04em}
+h2 small{display:block;font-size:.85rem;color:var(--soft);font-family:system-ui,sans-serif;letter-spacing:.1em}
+.text{max-width:760px}
+figure{margin:1.2rem 0}
+figure img{display:block;width:100%;height:auto;border-radius:10px;background:#e6e2d8}
+figure.big img{max-height:640px;object-fit:cover}
+figure.tall img{max-height:560px;object-fit:cover}
+figcaption{font-family:system-ui,sans-serif;font-size:.78rem;color:var(--soft);line-height:1.55;margin-top:.45rem}
+figcaption b{color:var(--ink);font-weight:600}
+.badge{display:inline-block;font-size:.7rem;padding:.05rem .45rem;border-radius:4px;margin-right:.25rem;vertical-align:1px}
+.real-b{background:#e3efe6;color:#2f6b45;border:1px solid #b7d4bf}
+.ai-b{background:#efe8f7;color:var(--ai);border:1px solid #d3c5e8}
+figure.ai{border:2px dashed #cdbfe3;border-radius:14px;padding:.6rem;background:#faf7fd}
+.aiwrap{position:relative}
+figure.ai.tall{max-width:620px;margin-left:auto;margin-right:auto}
+.cards{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.aimark{position:absolute;top:.6rem;left:.6rem;background:rgba(122,90,166,.92);color:#fff;font-family:system-ui,sans-serif;font-size:.78rem;padding:.2rem .6rem;border-radius:999px;letter-spacing:.05em}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.1rem;align-items:start}
+.grid figure{margin:0}
+.grid figure img{aspect-ratio:4/3;object-fit:cover}
+.grid figure.tall img{aspect-ratio:3/4}
+.two{display:grid;grid-template-columns:1.4fr 1fr;gap:1.4rem;align-items:start}
+blockquote{margin:1.4rem 0;padding:.9rem 1.3rem;background:var(--card);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;font-size:1.04rem}
+cite,.src{display:block;color:var(--soft);font-size:.78rem;font-style:normal;font-family:system-ui,sans-serif;margin-top:.3rem}
+.note{font-family:system-ui,sans-serif;font-size:.82rem;color:var(--soft)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1.1rem}
+.card h3{margin:.1rem 0 .3rem;font-size:1.02rem;font-weight:600}
+.know{background:#fff7ec;border:1px solid #e0c38f;border-radius:12px;padding:1.2rem 1.4rem;margin:2rem 0}
+.know h3{margin:.1rem 0 .6rem}
+.know li{margin:.35rem 0}
+table{width:100%;border-collapse:collapse;font-size:.92rem;background:var(--card)}
+td,th{border-bottom:1px solid var(--line);padding:.55rem;text-align:left;vertical-align:top}
+footer{margin-top:4rem;color:var(--soft);font-size:.78rem;font-family:system-ui,sans-serif;border-top:1px solid var(--line);padding-top:1rem}
+a{color:#3f6f52}
+@media(max-width:720px){.two{grid-template-columns:1fr}.hero img{height:62vh;min-height:340px}h2{font-size:1.35rem;margin-top:3rem}.lead{font-size:1.02rem}}
+.badge.inf{background:#fff1d6;color:#8a5a00;border:1px solid #e8c77d;font-weight:600}
+figure.ai.inset{float:right;width:40%;max-width:420px;margin:.4rem 0 1rem 1.6rem;padding:.4rem;border-width:1.5px}
+figure.ai.inset.left{float:left;margin:.4rem 1.6rem 1rem 0}
+figure.ai.inset.tall{width:30%;max-width:300px}
+figure.ai.inset figcaption{font-size:.7rem}
+.aimark{font-size:.68rem;top:.4rem;left:.4rem;padding:.12rem .5rem}
+.clear{clear:both}
+sup.fn{font-size:.62em;line-height:0;margin-left:.1em}sup.fn a{text-decoration:none;font-family:system-ui,sans-serif}
+#notes ol{padding-left:1.4rem}#notes li{margin:.45rem 0}#notes h3{font-size:1rem;margin:1.4rem 0 .3rem}#notes{font-size:.86rem;line-height:1.7}#notes li{scroll-margin-top:3.2rem}
+h3.sub{font-size:1.15rem;font-weight:600;margin:2.2rem 0 .3rem;color:#3f6f52}
+.story{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1.3rem;margin:1.2rem 0}
+.story h4{margin:.1rem 0 .4rem;font-size:1.02rem}
+.bridge{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:1rem;margin-top:1rem}
+.bcard{background:#fffdf6;border:1px solid #e6d3a8;border-radius:10px;padding:.9rem 1.1rem;font-size:.93rem;line-height:1.7}
+.bcard h4{margin:.1rem 0 .5rem;font-size:1.05rem}
+.bcard dt{font-family:system-ui,sans-serif;font-size:.72rem;letter-spacing:.06em;color:#8a6a3a;margin-top:.5rem}
+.bcard dd{margin:.1rem 0 0}
+.bcard dt.mis+dd{color:#7a6e63}
+.status td:first-child{width:32%}
+@media(max-width:720px){.bridge{grid-template-columns:1fr}figure.ai.inset,figure.ai.inset.left,figure.ai.inset.tall{float:none;width:78%;max-width:340px;margin:1rem auto}
+ table.status,table.status tbody,table.status tr,table.status td,table.status th{display:block;width:100%!important}
+ table.status tr{border-bottom:1px solid var(--line);padding:.4rem 0}
+ table.status tr:first-child{display:none}
+ table.status td{border:0;padding:.15rem .4rem}
+ table.status td:first-child{font-weight:600}
+ table.status td:last-child{font-size:.75rem;color:var(--soft)}}
+</style>
+</head>
+<body class="zh">
+<div class="bar">
+  <span class="draft"><span class="zh">图文预览稿 v0.4.1 · 未发布 · 待心舟草复验</span><span class="en">Illustrated preview v0.4.1 · not published · pending review</span></span>
+  <span><button id="bzh" class="on" onclick="setLang('zh')">中文</button><button id="ben" onclick="setLang('en')">English</button></span>
+</div>
+
+<section class="hero">
+  <img src="images/real/R06.webp" alt="加拿大度假胜地，阿纳西姆湖与木屋 / Canada Resort, Anahim Lake and cabins">
+  <div class="over">
+    <h1><span class="zh">美到窒息</span><span class="en">Breathtakingly Beautiful</span></h1>
+    <div class="sub"><span class="zh">第二家园正在创造怎样的生活？</span><span class="en">What kind of life is Second Home creating?</span></div>
+  </div>
+</section>
+<div class="herocap"><figcaption><span class="badge real-b"><span class="zh">家园实景</span><span class="en">Real photo</span></span><span class="zh">首屏：加拿大度假胜地（阿纳西姆湖）· 2026年秋 · R06 · 原帖：<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39441" target="_blank">雪峰《生命禅院加拿大家园一瞥》，2026-11-03</a>（照片由娇娥转帖）</span><span class="en">Cover: Canada Resort, Anahim Lake · autumn 2026 · R06 · source post (Chinese): <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39441" target="_blank">Xuefeng, "A glimpse of the Canada homes", 2026-11-03</a></span></figcaption></div>
+
+<main>
+<div class="lead">
+  <p class="zh">阿纳西姆湖边落了今年的第一场雪，甲板得扫，过冬的柴已经码好；夏天，湖岸的虞美人开得正盛。海那边的济州岛也没闲着：亲人们刷栏杆、修剪棕榈树，把厨房边的荒地一点点开成明年春天的菜园。</p>
+  <p class="zh">这些事说起来，平常得很。可一抬头，就是湖水、云朵、花和风；一回身，又是一冠冠亲人，各做各喜欢的，各做各擅长的。</p>
+  <p class="zh">这样的日子，我们正在过。忙是真忙，美也是真美。来，看看我们的第二家园。</p>
+  <p class="zh note">※ 下面都是家园实景，出处标在每张照片下；橙色「推论」标签表示拍摄地是推论。紫色虚线框的六张小插画是 AI 意境创作，非实拍。详见文末<a href="#notes">资料说明 · 照片来源</a>。</p>
+  <p class="en">The first snow of the year has fallen on Anahim Lake, so the deck needs sweeping, and the winter firewood is already stacked. In summer the poppies along the shore were in full bloom. Across the sea on Jeju, nobody is idle either: we are painting railings, trimming palms, and turning the waste ground by the kitchen, bit by bit, into next spring's vegetable garden.</p>
+  <p class="en">Put like that, it all sounds very ordinary. But look up and there are the lake, the clouds, the flowers and the wind; turn round and there are our own people, each doing what they love and what they are good at.</p>
+  <p class="en">This is the life we are living. The work is real, and so is the beauty. Come and see our Second Home.</p>
+  <p class="en note">※ All photos below are real photos from the Home, with sources under each one; an orange "inferred" tag means the location is inferred. The six small illustrations in purple dashed frames are AI-generated, not photographs. See <a href="#notes">Notes · Photo sources</a> at the end.</p>
+</div>
+
+<h2><small>一 · ONE</small><span class="zh">湖与花</span><span class="en">The lake and the flowers</span></h2>
+<div class="text">
+<p class="zh">度假胜地就在阿纳西姆湖边。湖名来自原住民语，意思是「创造之初」（M08）。八月，湖岸的花田里虞美人开成一片。雪峰管它叫「家园花」，说它们「自由地、自豪地、潇洒地、浪漫地、放肆地开始了怒放」，「一株株家园花，像一冠冠禅院草」（<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39444" target="_blank">39444</a>）。</p>
+<p class="en">The Resort sits on Anahim Lake, an Indigenous name said to mean "the beginning of creation" (M08). In August the lakeside beds fill with poppies. Xuefeng calls them "home flowers", blooming "freely, proudly, boldly, romantically, unrestrainedly", "each one like a Chanyuan Celestial" (<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39444" target="_blank">39444</a>).</p>
+</div>
+<figure class="real big"><a href="images/real/R01.webp" target="_blank"><img src="images/real/R01.webp" width="1280" height="960" loading="lazy" alt="湖边的虞美人花田 / Poppy field by the lake"></a>
+<figcaption><span class="badge real-b"><span class="zh">家园实景</span><span class="en">Real photo</span></span> <b class="zh">湖边的虞美人花田</b><b class="en">Poppy field by the lake</b><br><span class="zh">加拿大度假胜地 · 2026年8月 · R01 · 原帖：<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39444" target="_blank">雪峰《家园花怒放在度假胜地》，2026-08-22</a></span><span class="en">Canada Resort · August 2026 · R01 · source post (Chinese): <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39444" target="_blank">Xuefeng, "Home flowers in bloom at the Resort", 2026-08-22</a></span></figcaption></figure>
+<div class="grid">
+<figure class="real "><a href="images/real/R02.webp" target="_blank"><img src="images/real/R02.webp" width="1280" height="960" loading="lazy" alt="虞美人特写 / Poppy close-up"></a>
+<figcaption><span class="badge real-b"><span class="zh">家园实景</span><span class="en">Real photo</span></span> <b class="zh">虞美人特写</b><b class="en">Poppy close-up</b><br><span class="zh">加拿大度假胜地 · 2026年8月 · R02 · 原帖：<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39444" target="_blank">雪峰《家园花怒放在度假胜地》，2026-08-22</a></span><span class="en">Canada Resort · August 2026 · R02 · source post (Chinese): <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39444" target="_blank">Xuefeng, "Home flowers in bloom at the Resort", 2026-08-22</a></span></figcaption></figure>
+<figure class="real tall"><a href="images/real/R11.webp" target="_blank"><img src="images/real/R11.webp" width="960" height="1280" loading="lazy" alt="黄昏湖面与一弯新月 / Dusk over the lake, a crescent moon"></a>
+<figcaption><span class="badge real-b"><span class="zh">家园实景</span><span class="en">Real photo</span></span> <b class="zh">黄昏湖面与一弯新月</b><b class="en">Dusk over the lake, a crescent moon</b><br><span class="zh">加拿大度假胜地 · 2026年秋 · R11 · 原帖：<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39441" target="_blank">雪峰《生命禅院加拿大家园一瞥》，2026-11-03</a></span><span class="en">Canada Resort · autumn 2026 · R11 · source post (Chinese): <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39441" target="_blank">Xuefeng, "A glimpse of the Canada homes", 2026-11-03</a></span></figcaption></figure>
+</div>
+<figure class="ai inset "><div class="aiwrap"><img src="images/ai/ai-01-hero.webp" width="1600" height="900" loading="lazy" alt="AI意境创作：湖边小路 / AI-generated mood illustration: A lakeside path"><span class="aimark"><span class="zh">AI意境创作·非实拍</span><span class="en">AI-generated · not a photo</span></span></div>
+<figcaption><span class="badge ai-b"><span class="zh">AI意境创作 · 非实拍</span><span class="en">AI-generated mood illustration · not a photograph</span></span> <span class="zh">意境：湖边小路。心舟草生成、逸仙草提供；只表达气质，不代表真实房屋、人物或事件。</span><span class="en">Theme: A lakeside path. Generated by Xinzhou, supplied by Yixian. It conveys a mood only and depicts no real building, person or event.</span></figcaption></figure>
+<p class="zh">我们和这片湖的关系，说来也简单：一年四季，它都在窗外。</p>
+<blockquote class="zh">“坐在二楼客厅的沙发里，往三面望去，雪山、森林、湖泊、天上飞的大雁和老鹰，湖里嬉戏的野鸭子和天鹅等引入眼帘，偶尔进入视野的还有小鹿、红狐、松鼠……我整个人融进了大自然。”<cite>原文 · 雪峰《生命禅院加拿大家园一瞥》，2026-11-03 · <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39441" target="_blank">原帖</a></cite></blockquote>
+<p class="en">Our bond with this lake is simple: in every season, it is right outside the window.</p>
+<blockquote class="en">"Sitting on the sofa in the upstairs living room and looking out on three sides: snowy mountains, forest, lake, wild geese and eagles overhead, ducks and swans on the water, now and then a deer, a red fox, a squirrel… I melt into nature."<cite>Xuefeng, 2026-11-03 · <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39441" target="_blank">source post</a> · unofficial translation</cite></blockquote>
+<div class="clear"></div>
+
+<h2><small>二 · TWO</small><span class="zh">初雪那天，先扫甲板</span><span class="en">On the day of the first snow, sweep the deck</span></h2>
+<div class="text">
+<p class="zh">2026 年 10 月 29 日，度假胜地飘了第一场雪；11 月 1 日，阿纳西姆湖开始结冰。忙了春、夏、秋三季的兄弟姐妹们，终于有机会歇一歇，「脱去一身的疲惫」，为 2027 年的忙碌攒些力气（<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39441" target="_blank">39441</a>）。</p>
+<p class="zh">回头看这一年：我们修好了能挖、能吊、能推雪的三用拖拉机和一台铲雪机，换了通向湖的甲板浮桶，给宿营地和客房门前的桌凳刷了漆，买来三车石子，铺出约 500 米碎石路（39441）。照片里那条碎石路，就是这样一车一车铺出来的。</p>
+<p class="en">On 29 October 2026 the first snow fell at the Resort; on 1 November Anahim Lake began to freeze. After three busy seasons, spring, summer and autumn, our brothers and sisters finally get a break, a chance to "shake off the tiredness" and store up energy for a busy 2027 (<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39441" target="_blank">39441</a>).</p>
+<p class="en">Looking back on the year: we repaired a three-way tractor (dig, lift, push snow) and a snowblower, replaced the floats on the decks out to the lake, painted the tables and benches at the campsite and outside the guest rooms, and bought three truckloads of gravel to lay about 500 metres of road (39441). The gravel road in the photo was laid exactly like that, one load at a time.</p>
+</div>
+<figure class="real big"><a href="images/real/R08.webp" target="_blank"><img src="images/real/R08.webp" width="1280" height="960" loading="lazy" alt="初雪后，湖边甲板上扫雪 / Sweeping the lakeside deck after the first snow"></a>
+<figcaption><span class="badge real-b"><span class="zh">家园实景</span><span class="en">Real photo</span></span> <b class="zh">初雪后，湖边甲板上扫雪</b><b class="en">Sweeping the lakeside deck after the first snow</b><br><span class="zh">加拿大度假胜地 · 2026年10月底初雪后 · R08 · 原帖：<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39441" target="_blank">雪峰《生命禅院加拿大家园一瞥》，2026-11-03</a></span><span class="en">Canada Resort · after the first snow, late Oct 2026 · R08 · source post (Chinese): <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39441" target="_blank">Xuefeng, "A glimpse of the Canada homes", 2026-11-03</a></span></figcaption></figure>
+<div class="grid">
+<figure class="real "><a href="images/real/R09.webp" target="_blank"><img src="images/real/R09.webp" width="1280" height="960" loading="lazy" alt="码好的过冬劈柴 / Firewood stacked for winter"></a>
+<figcaption><span class="badge real-b"><span class="zh">家园实景</span><span class="en">Real photo</span></span> <b class="zh">码好的过冬劈柴</b><b class="en">Firewood stacked for winter</b><br><span class="zh">加拿大度假胜地 · 2026年秋冬 · R09 · 原帖：<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39441" target="_blank">雪峰《生命禅院加拿大家园一瞥》，2026-11-03</a></span><span class="en">Canada Resort · autumn–winter 2026 · R09 · source post (Chinese): <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39441" target="_blank">Xuefeng, "A glimpse of the Canada homes", 2026-11-03</a></span></figcaption></figure>
+<figure class="real "><a href="images/real/R10.webp" target="_blank"><img src="images/real/R10.webp" width="1280" height="960" loading="lazy" alt="拖拉机和铺路用的碎石 / Tractor and gravel for the roads"></a>
+<figcaption><span class="badge real-b"><span class="zh">家园实景</span><span class="en">Real photo</span></span> <b class="zh">拖拉机和铺路用的碎石</b><b class="en">Tractor and gravel for the roads</b><br><span class="zh">加拿大度假胜地 · 2026年 · R10 · 原帖：<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39441" target="_blank">雪峰《生命禅院加拿大家园一瞥》，2026-11-03</a></span><span class="en">Canada Resort · 2026 · R10 · source post (Chinese): <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39441" target="_blank">Xuefeng, "A glimpse of the Canada homes", 2026-11-03</a></span></figcaption></figure>
+<figure class="real "><a href="images/real/R07.webp" target="_blank"><img src="images/real/R07.webp" width="1280" height="960" loading="lazy" alt="营地里的木屋与碎石路 / Cabins and gravel road at the camp"></a>
+<figcaption><span class="badge real-b"><span class="zh">家园实景</span><span class="en">Real photo</span></span> <b class="zh">营地里的木屋与碎石路</b><b class="en">Cabins and gravel road at the camp</b><br><span class="zh">加拿大度假胜地 · 2026年秋 · R07 · 原帖：<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39441" target="_blank">雪峰《生命禅院加拿大家园一瞥》，2026-11-03</a></span><span class="en">Canada Resort · autumn 2026 · R07 · source post (Chinese): <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39441" target="_blank">Xuefeng, "A glimpse of the Canada homes", 2026-11-03</a></span></figcaption></figure>
+</div>
+<figure class="ai inset left"><div class="aiwrap"><img src="images/ai/ai-02-labour.webp" width="1536" height="1024" loading="lazy" alt="AI意境创作：劳动 / AI-generated mood illustration: Work"><span class="aimark"><span class="zh">AI意境创作·非实拍</span><span class="en">AI-generated · not a photo</span></span></div>
+<figcaption><span class="badge ai-b"><span class="zh">AI意境创作 · 非实拍</span><span class="en">AI-generated mood illustration · not a photograph</span></span> <span class="zh">意境：劳动。心舟草生成、逸仙草提供；只表达气质，不代表真实房屋、人物或事件。</span><span class="en">Theme: Work. Generated by Xinzhou, supplied by Yixian. It conveys a mood only and depicts no real building, person or event.</span></figcaption></figure>
+<blockquote class="zh">“我感觉工作是很好的修炼场，人每时每刻的行为举动和状态都是自身心性和意识的反映……没有一滴汗水是白流的。”<cite>原文 · 同心草《加国总院——又是一年丰收时》，2026-11-04 · <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39442" target="_blank">原帖</a></cite></blockquote>
+<blockquote class="en">"Work is a fine place for self-cultivation; every action and state of mind reflects one's nature… not one drop of sweat is wasted."<cite>Tongxin, 2026-11-04 · <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39442" target="_blank">source post</a> · unofficial translation</cite></blockquote>
+<p class="zh">同心草把总院的日子写得很实在：从四月下旬到十月中，每天「起床与黎明共舞」，伴着日出为客人煮上咖啡；「工作繁重且节奏紧凑」，「每隔一周或十天（有时半个月）只要条件允许我们就会安排一次休息」。累是真的。可她也写，这几年自己被锻炼得「越发踏实、耐心」，从「一开始的不熟悉有些紧张」，到「越来越笃定、自如、自然、驾轻就熟」——这份长进，也是真的（<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39442" target="_blank">39442</a>）。</p>
+<p class="zh">十月初，大家抽空出去玩了一天，「终于有机会出去玩一天跑了三处」：108 Mile 的高尔夫球场和连绵的草场湖景，Canim Lake「特别美丽柔情的湖光山色」，还有一座瀑布公园（39442）。在这里干活不为领工资；新人进家园，要先过「劳动关」——具体是什么，下文「读懂几个词」里说。</p>
+<p class="en">Tongxin writes about life at the Main Home without varnish: from late April to mid-October, every day begins "dancing with the dawn", making coffee for guests as the sun comes up; the work is "heavy and tightly paced", and "every week or ten days (sometimes half a month), when we can, we take a day off". The tiredness is real. But she also writes that these years have made her "steadier and more patient", taking her from "unfamiliar and a little nervous at first" to "more and more sure, at ease, natural and practised". That growth is real too (<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39442" target="_blank">39442</a>).</p>
+<p class="en">In early October everyone took a day off together and "finally got out for a day and saw three places": the golf course and rolling meadows at 108 Mile, the "especially lovely, tender" lake and hills of Canim Lake, and a waterfall park (39442). None of this work is for wages; newcomers first go through a "labor test", explained below in "Reading a few words".</p>
+<div class="clear"></div>
+
+<h2><small>三 · THREE</small><span class="zh">丰收：菜地、蘑菇和芍药</span><span class="en">Harvest: garden, mushrooms, peonies</span></h2>
+<div class="text">
+<p class="zh">总院客房走到尽头，下了台阶就是菜地：豆角、香菜、生菜、芥菜、西红柿、韭菜和葱；再往后走，后院草场的一小片地里还试种了南瓜、向日葵和洋姜。菜地一角，芍药在花期开得正艳（<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39442" target="_blank">39442</a>）。今年雨水多，蘑菇也多。</p>
+<p class="en">At the end of the guest wing of the Main Home, down the steps, is the vegetable garden: beans, coriander, lettuce, mustard greens, tomatoes, garlic chives and spring onions; further back, a small plot on the back meadow is trying out pumpkins, sunflowers and Jerusalem artichokes. In one corner the peonies are in full bloom in their season (<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39442" target="_blank">39442</a>). It rained a lot this year, and the mushrooms came with the rain.</p>
+</div>
+<div class="grid">
+<figure class="real tall"><a href="images/real/R14.webp" target="_blank"><img src="images/real/R14.webp" width="723" height="1280" loading="lazy" alt="菜地里挂果的番茄 / Tomatoes ripening in the garden"></a>
+<figcaption><span class="badge real-b"><span class="zh">家园实景</span><span class="en">Real photo</span></span> <span class="badge inf"><span class="zh">地点为推论</span><span class="en">location inferred</span></span> <b class="zh">菜地里挂果的番茄</b><b class="en">Tomatoes ripening in the garden</b><br><span class="zh">加国总院菜地（推论） · 2026年夏秋 · R14 · 原帖：<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39442" target="_blank">同心草《加国总院——又是一年丰收时》，2026-11-04</a></span><span class="en">Canada Main Home garden (inferred) · summer–autumn 2026 · R14 · source post (Chinese): <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39442" target="_blank">Tongxin, "Canada Main Home: another harvest season", 2026-11-04</a></span></figcaption></figure>
+<figure class="real tall"><a href="images/real/R15.webp" target="_blank"><img src="images/real/R15.webp" width="723" height="1280" loading="lazy" alt="一独轮车采来的野蘑菇 / A wheelbarrow of wild mushrooms"></a>
+<figcaption><span class="badge real-b"><span class="zh">家园实景</span><span class="en">Real photo</span></span> <span class="badge inf"><span class="zh">地点为推论</span><span class="en">location inferred</span></span> <b class="zh">一独轮车采来的野蘑菇</b><b class="en">A wheelbarrow of wild mushrooms</b><br><span class="zh">加国总院（推论） · 2026年夏秋 · R15 · 原帖：<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39442" target="_blank">同心草《加国总院——又是一年丰收时》，2026-11-04</a></span><span class="en">Canada Main Home (inferred) · summer–autumn 2026 · R15 · source post (Chinese): <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39442" target="_blank">Tongxin, "Canada Main Home: another harvest season", 2026-11-04</a></span></figcaption></figure>
+<figure class="real "><a href="images/real/R16.webp" target="_blank"><img src="images/real/R16.webp" width="1280" height="960" loading="lazy" alt="花坛里的芍药 / Peonies in the flower bed"></a>
+<figcaption><span class="badge real-b"><span class="zh">家园实景</span><span class="en">Real photo</span></span> <span class="badge inf"><span class="zh">地点为推论</span><span class="en">location inferred</span></span> <b class="zh">花坛里的芍药</b><b class="en">Peonies in the flower bed</b><br><span class="zh">加国总院（推论） · 2026年夏 · R16 · 原帖：<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39442" target="_blank">同心草《加国总院——又是一年丰收时》，2026-11-04</a></span><span class="en">Canada Main Home (inferred) · summer 2026 · R16 · source post (Chinese): <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39442" target="_blank">Tongxin, "Canada Main Home: another harvest season", 2026-11-04</a></span></figcaption></figure>
+</div>
+<figure class="ai inset tall"><div class="aiwrap"><img src="images/ai/ai-03-harvest.webp" width="1122" height="1402" loading="lazy" alt="AI意境创作：丰收 / AI-generated mood illustration: Harvest"><span class="aimark"><span class="zh">AI意境创作·非实拍</span><span class="en">AI-generated · not a photo</span></span></div>
+<figcaption><span class="badge ai-b"><span class="zh">AI意境创作 · 非实拍</span><span class="en">AI-generated mood illustration · not a photograph</span></span> <span class="zh">意境：丰收。心舟草生成、逸仙草提供；只表达气质，不代表真实房屋、人物或事件。</span><span class="en">Theme: Harvest. Generated by Xinzhou, supplied by Yixian. It conveys a mood only and depicts no real building, person or event.</span></figcaption></figure>
+<blockquote class="zh">“今年雨水很多，琴友在草坪、小树林里和林坡下捡了许许多多各种类型的蘑菇……我们选用了可以食用的品种吃了很多很多顿，口感爽滑鲜嫩，味道鲜美。”<cite>原文 · 同心草，2026-11-04 · <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39442" target="_blank">原帖</a></cite></blockquote>
+<blockquote class="en">"It rained a lot this year. Qinyou gathered all kinds of mushrooms on the lawn, in the copse and down the wooded slope… we picked out the edible ones and ate them for meal after meal."<cite>Tongxin, 2026-11-04 · <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39442" target="_blank">source post</a> · unofficial translation</cite></blockquote>
+<div class="clear"></div>
+
+<h2><small>四 · FOUR</small><span class="zh">两张桌子：接待客人，和自己人吃饭</span><span class="en">Two tables: hosting guests, and eating together</span></h2>
+<h3 class="sub"><span class="zh">① 接待客人的日常</span><span class="en">① Hosting guests, day after day</span></h3>
+<div class="text">
+<p class="zh">为客人准备早餐，是我们一天里认真细致的工作。下面这张长桌，是<b>摆给民宿住客的早餐</b>，不是我们自己的饭桌。加拿大两处家园都经营民宿，这是家园的生计：清晨，咖啡壶里的香气「如约升起」，按客人喜好烹制的鸡蛋与烤肠端上桌；早餐后洗烘、铺叠床品，打扫客房，下午三点前一切就绪，静候新一天的客人。晚上给不想外出的客人做晚餐，他们最喜欢的是我们的煎饺和炒面（<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39442" target="_blank">39442</a>）。</p>
+<p class="zh">到 2026 年 11 月初，两处家园这一年接待了大约 1300 批住客（「批」为推论口径，39441）<sup class="fn"><a href="#n1">※1</a></sup>。同心草另写，总院每年平均接待约 1500 位客人（39442）。</p>
+<p class="en">Making breakfast for guests is careful, detailed work in our day. The long table below is <b>breakfast set out for B&amp;B guests</b>, not our own table. Both Canada homes run guesthouses; that is how the Home makes its living. At dawn the smell of coffee "rises as promised", and eggs and sausages cooked the way each guest likes go to the table; after breakfast the linen is washed, dried and folded, the rooms are cleaned, and everything is ready by 3 p.m. for the day's new guests. In the evening we cook for guests who would rather not go out; their favourites are our pan-fried dumplings and fried noodles (<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39442" target="_blank">39442</a>).</p>
+<p class="en">By early November 2026 the two homes had hosted about 1,300 guest parties this year ("parties" is an inferred unit; 39441)<sup class="fn"><a href="#n1e">※1</a></sup>. Tongxin adds that the Main Home welcomes about 1,500 guests a year on average (39442).</p>
+</div>
+<figure class="real big"><a href="images/real/R13.webp" target="_blank"><img src="images/real/R13.webp" width="1280" height="960" loading="lazy" alt="给民宿客人摆好的早餐桌，窗外是草坪和湖 / Breakfast laid out for B&B guests, lawn and lake beyond"></a>
+<figcaption><span class="badge real-b"><span class="zh">家园实景</span><span class="en">Real photo</span></span> <b class="zh">给民宿客人摆好的早餐桌，窗外是草坪和湖</b><b class="en">Breakfast laid out for B&B guests, lawn and lake beyond</b><br><span class="zh">加国总院民宿餐厅 · 2026年 · R13 · 原帖：<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39442" target="_blank">同心草《加国总院——又是一年丰收时》，2026-11-04</a></span><span class="en">Canada Main Home B&B dining room · 2026 · R13 · source post (Chinese): <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39442" target="_blank">Tongxin, "Canada Main Home: another harvest season", 2026-11-04</a></span></figcaption></figure>
+<div class="grid">
+<figure class="real "><a href="images/real/R05.webp" target="_blank"><img src="images/real/R05.webp" width="1280" height="960" loading="lazy" alt="清晨灶台上的培根和煎蛋 / Bacon and eggs on the morning stove"></a>
+<figcaption><span class="badge real-b"><span class="zh">家园实景</span><span class="en">Real photo</span></span> <b class="zh">清晨灶台上的培根和煎蛋</b><b class="en">Bacon and eggs on the morning stove</b><br><span class="zh">加国总院厨房 · 2026年 · R05 · 原帖：<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39442" target="_blank">同心草《加国总院——又是一年丰收时》，2026-11-04</a></span><span class="en">Canada Main Home kitchen · 2026 · R05 · source post (Chinese): <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39442" target="_blank">Tongxin, "Canada Main Home: another harvest season", 2026-11-04</a></span></figcaption></figure>
+</div>
+<h3 class="sub"><span class="zh">② 家园内部的共享生活</span><span class="en">② Life shared inside the Home</span></h3>
+<div class="text">
+<p class="zh">客人离开，回到自己的饭桌，又是另一番自在的滋味。2025 年春节，总院的桌上是虾仁炒蔬菜、蚝油生菜、清蒸鱼和排骨。济州家园还在建设时，桌上有一锅面条汤、两盘生菜包肉。大家照平时的自助方式，用公筷把饭菜夹到各自的碗盘里，坐下来，吃一顿舒心的家常饭。</p>
+<p class="zh">这不是什么盛宴，却是我们真正在过的日子。</p>
+<p class="en">When the guests have gone and we sit down at our own table, the day takes on a different, easier flavour. At Lunar New Year 2025 the Main Home table had shrimp stir-fried with vegetables, lettuce in oyster sauce, steamed fish and ribs. While the Jeju home was still being built, there was a pot of noodle soup and two plates of lettuce wraps. As always, we served ourselves buffet-style, using serving chopsticks to put food into our own bowls and plates, then sat down to a good, homely meal.</p>
+<p class="en">It is no banquet. It is simply the life we really live.</p>
+</div>
+<div class="grid">
+<figure class="real "><a href="images/real/R27.webp" target="_blank"><img src="images/real/R27.webp" width="1131" height="849" loading="lazy" alt="春节的家常菜：虾仁炒蔬菜、蚝油生菜、清蒸鱼、排骨 / New Year home dishes: shrimp stir-fry, greens, steamed fish, ribs"></a>
+<figcaption><span class="badge real-b"><span class="zh">家园实景</span><span class="en">Real photo</span></span> <span class="badge inf"><span class="zh">地点为推论</span><span class="en">location inferred</span></span> <b class="zh">春节的家常菜：虾仁炒蔬菜、蚝油生菜、清蒸鱼、排骨</b><b class="en">New Year home dishes: shrimp stir-fry, greens, steamed fish, ribs</b><br><span class="zh">加国总院（推论） · 2025年春节 · R27 · 原帖：<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=38440" target="_blank">同心草《加国总院2025庆新春玩耍花絮》，2025-02-01</a></span><span class="en">Canada Main Home (inferred) · Lunar New Year 2025 · R27 · source post (Chinese): <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=38440" target="_blank">Tongxin, "Canada Main Home: New Year 2025 fun", 2025-02-01</a></span></figcaption></figure>
+<figure class="real "><a href="images/real/R21.webp" target="_blank"><img src="images/real/R21.webp" width="1280" height="720" loading="lazy" alt="一桌家常饭：面条汤、生菜包肉 / A home meal: noodle soup, lettuce wraps"></a>
+<figcaption><span class="badge real-b"><span class="zh">家园实景</span><span class="en">Real photo</span></span> <b class="zh">一桌家常饭：面条汤、生菜包肉</b><b class="en">A home meal: noodle soup, lettuce wraps</b><br><span class="zh">韩国济州阳光家园 · 2026年秋 · R21 · 原帖：<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39440" target="_blank">千姿草《阳光家园棕榈树度假胜地建设进展》，2026-11-04</a></span><span class="en">Jeju Sunshine Home, Korea · autumn 2026 · R21 · source post (Chinese): <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39440" target="_blank">Qianzi, "Construction progress at Sunshine Home Palm Tree Resort", 2026-11-04</a></span></figcaption></figure>
+</div>
+<figure class="ai inset left"><div class="aiwrap"><img src="images/ai/ai-05-sharing.webp" width="1536" height="1024" loading="lazy" alt="AI意境创作：共享 / AI-generated mood illustration: Sharing"><span class="aimark"><span class="zh">AI意境创作·非实拍</span><span class="en">AI-generated · not a photo</span></span></div>
+<figcaption><span class="badge ai-b"><span class="zh">AI意境创作 · 非实拍</span><span class="en">AI-generated mood illustration · not a photograph</span></span> <span class="zh">意境：共享。心舟草生成、逸仙草提供；只表达气质，不代表真实房屋、人物或事件。</span><span class="en">Theme: Sharing. Generated by Xinzhou, supplied by Yixian. It conveys a mood only and depicts no real building, person or event.</span></figcaption></figure>
+<p class="zh">这张饭桌背后，是「东西归大家」的日子。雪峰写得很直接：「加拿大两处家园的财产，属于全体禅院草」；任何一位禅院草，只要草龄超过 8 年、积攒够 2000F 币，就可以来加拿大家园「享受免费的吃穿住行生老病死的福利」（<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39441" target="_blank">39441</a>）。谁也不占有，谁都有着落——文集里管这叫「无有制」，下文细说。</p>
+<p class="en">Behind this table is a life in which things belong to everyone. Xuefeng puts it plainly: "the property of the two Canada homes belongs to all Chanyuan Celestials"; any Celestial with more than 8 years of membership and 2,000 F-coins may come to the Canada homes and "enjoy free food, clothing, housing, transport and care through birth, old age, sickness and death" (<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39441" target="_blank">39441</a>). No one possesses; everyone is provided for. Our writings call this "no-ownership"; more below.</p>
+<blockquote class="zh">“一无所有，才能拥有一切。”<cite>原文 · 《新时代人类八百理念》第五版 第六篇 第570条 · <a href="https://www.lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39223" target="_blank">tid=39223</a></cite></blockquote>
+<blockquote class="en">"Only by owning nothing can one have everything."<cite>800 Concepts, 5th ed., Part 6, #570 · <a href="https://www.lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39223" target="_blank">tid=39223</a> · unofficial translation</cite></blockquote>
+<div class="clear"></div>
+
+<h2><small>五 · FIVE</small><span class="zh">济州：一座正在建起来的家园</span><span class="en">Jeju: a home being built</span></h2>
+<div class="text">
+<p class="zh">阳光家园在韩国济州岛，对外叫「棕榈树度假苑」。泰国家园结束、大家大转移之后，我们在这里重新扎下了根。千姿草回想这一路，「仿佛经历了一场梦，又仿佛共同演绎了一场跌宕起伏的人生大戏。戏中有欢笑，也有泪水」；如今「家园里的每一天，也因此更加值得珍惜，充满了幸福与喜悦」（<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39440" target="_blank">39440</a>）。</p>
+<p class="zh">2026 年 9 月 29 日，阳光家园签下为期三年的民宿经营合同，导游给每位禅院草明确了分工，千姿草说是「为大家套上了各自的“紧箍咒”」。曲丹哥哥带着逸仙、大气，给七栋房屋的栏杆重新刷上油漆；百川设计了度假苑的大门 Logo，又画了菜园规划图；道谛、仰乐和兄弟姐妹们把厨房天宝亭边杂草丛生的荒地清理出来，照着图铺菜园的路，「为明年春天的蔬菜种植做好准备」。太极请专业公司用升降机修剪了棕榈树，网络装好了，水电也通过了检测。济州天气转凉，「大家的热情丝毫不减，依然激情满满」（39440）。这里还在建设和筹备中。</p>
+<p class="en">Sunshine Home is on Jeju Island, Korea, known publicly as "Palm Tree Resort". After the Thailand home ended and we all moved on, this is where we put down roots again. Looking back, Qianzi writes that it was "like a dream, or a drama full of ups and downs that we played out together, with laughter and with tears"; now "every day in the Home is all the more precious, full of happiness and joy" (<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39440" target="_blank">39440</a>).</p>
+<p class="en">On 29 September 2026 Sunshine Home signed a three-year guesthouse operating contract, and our guide gave every Celestial a clear task; Qianzi says each of us got our own "magic headband" (the Monkey King's binding band). Brother Qudan led Yixian and Daqi in repainting the railings of all seven houses; Baichuan designed the gate logo and drew the garden plan; Daodi, Yangle and other brothers and sisters cleared the overgrown ground by Tianbao Pavilion, the kitchen, and are laying the garden paths to the plan, "ready for planting next spring". Taiji had a specialist firm trim the palms with a lift; the internet is in and water and power have passed inspection. Jeju is turning cool, but "everyone's enthusiasm hasn't dropped a bit" (39440). The home is still being built and prepared.</p>
+</div>
+<figure class="real big"><a href="images/real/R18.webp" target="_blank"><img src="images/real/R18.webp" width="1280" height="720" loading="lazy" alt="棕榈树后的济州日落 / Jeju sunset behind the palms"></a>
+<figcaption><span class="badge real-b"><span class="zh">家园实景</span><span class="en">Real photo</span></span> <b class="zh">棕榈树后的济州日落</b><b class="en">Jeju sunset behind the palms</b><br><span class="zh">韩国济州阳光家园 · 2026年秋 · R18 · 原帖：<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39440" target="_blank">千姿草《阳光家园棕榈树度假胜地建设进展》，2026-11-04</a></span><span class="en">Jeju Sunshine Home, Korea · autumn 2026 · R18 · source post (Chinese): <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39440" target="_blank">Qianzi, "Construction progress at Sunshine Home Palm Tree Resort", 2026-11-04</a></span></figcaption></figure>
+<div class="grid">
+<figure class="real "><a href="images/real/R17.webp" target="_blank"><img src="images/real/R17.webp" width="1280" height="720" loading="lazy" alt="草坪、白墙房屋和棕榈树；远处两人在除草 / Lawn, white houses and palms; two people weeding far off"></a>
+<figcaption><span class="badge real-b"><span class="zh">家园实景</span><span class="en">Real photo</span></span> <b class="zh">草坪、白墙房屋和棕榈树；远处两人在除草</b><b class="en">Lawn, white houses and palms; two people weeding far off</b><br><span class="zh">韩国济州阳光家园 · 2026年秋 · R17 · 原帖：<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39440" target="_blank">千姿草《阳光家园棕榈树度假胜地建设进展》，2026-11-04</a></span><span class="en">Jeju Sunshine Home, Korea · autumn 2026 · R17 · source post (Chinese): <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39440" target="_blank">Qianzi, "Construction progress at Sunshine Home Palm Tree Resort", 2026-11-04</a></span></figcaption></figure>
+<figure class="real tall"><a href="images/real/R19.webp" target="_blank"><img src="images/real/R19.webp" width="720" height="1280" loading="lazy" alt="请来升降机修剪棕榈树 / A lift truck trimming the palms"></a>
+<figcaption><span class="badge real-b"><span class="zh">家园实景</span><span class="en">Real photo</span></span> <b class="zh">请来升降机修剪棕榈树</b><b class="en">A lift truck trimming the palms</b><br><span class="zh">韩国济州阳光家园 · 2026年秋 · R19 · 原帖：<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39440" target="_blank">千姿草《阳光家园棕榈树度假胜地建设进展》，2026-11-04</a></span><span class="en">Jeju Sunshine Home, Korea · autumn 2026 · R19 · source post (Chinese): <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39440" target="_blank">Qianzi, "Construction progress at Sunshine Home Palm Tree Resort", 2026-11-04</a></span></figcaption></figure>
+<figure class="real "><a href="images/real/R20.webp" target="_blank"><img src="images/real/R20.webp" width="1280" height="720" loading="lazy" alt="一起开荒，准备明年的菜园 / Clearing land together for next spring's garden"></a>
+<figcaption><span class="badge real-b"><span class="zh">家园实景</span><span class="en">Real photo</span></span> <b class="zh">一起开荒，准备明年的菜园</b><b class="en">Clearing land together for next spring's garden</b><br><span class="zh">韩国济州阳光家园 · 2026年秋 · R20 · 原帖：<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39440" target="_blank">千姿草《阳光家园棕榈树度假胜地建设进展》，2026-11-04</a></span><span class="en">Jeju Sunshine Home, Korea · autumn 2026 · R20 · source post (Chinese): <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39440" target="_blank">Qianzi, "Construction progress at Sunshine Home Palm Tree Resort", 2026-11-04</a></span></figcaption></figure>
+</div>
+<blockquote class="zh">“如今，十几棵高大挺拔的棕榈树在风中摇曳，焕然一新的姿态成为园中一道亮丽的风景……大家根据需要参与劳动，共同为家园建设贡献力量和才华。”<cite>原文 · 千姿草《阳光家园棕榈树度假胜地建设进展》，2026-11-04 · <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39440" target="_blank">原帖</a></cite></blockquote>
+<blockquote class="en">"Now a dozen tall palms sway in the wind, renewed, a bright sight in the grounds… everyone joins the work as needed, contributing strength and talent to building the home."<cite>Qianzi, 2026-11-04 · <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39440" target="_blank">source post</a> · unofficial translation</cite></blockquote>
+
+<h2><small>六 · SIX</small><span class="zh">人和人：篝火、烟花，和送别</span><span class="en">People: bonfires, fireworks, farewells</span></h2>
+<div class="text">
+<p class="zh">日子过得有滋有味，是因为身边有这些人。</p>
+<p class="en">What makes the days worth living is the people beside us.</p>
+</div>
+<figure class="real big"><a href="images/real/R26.webp" target="_blank"><img src="images/real/R26.webp" width="1280" height="960" loading="lazy" alt="傍晚，湖边草坪上围着篝火坐成一圈 / Evening: sitting round a bonfire on the lakeside lawn"></a>
+<figcaption><span class="badge real-b"><span class="zh">家园实景</span><span class="en">Real photo</span></span> <span class="badge inf"><span class="zh">地点为推论</span><span class="en">location inferred</span></span> <b class="zh">傍晚，湖边草坪上围着篝火坐成一圈</b><b class="en">Evening: sitting round a bonfire on the lakeside lawn</b><br><span class="zh">加国总院草坪（推论） · 2025年6月 · R26 · 原帖：<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=38445" target="_blank">娇娥草《加拿大总院的幸福时光》，2025-06-26</a></span><span class="en">Canada Main Home lawn (inferred) · June 2025 · R26 · source post (Chinese): <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=38445" target="_blank">Jiao'e, "Happy days at the Canada Main Home", 2025-06-26</a></span></figcaption></figure>
+<div class="story">
+  <h4 class="zh">送别那天，点一堆篝火</h4><h4 class="en">On the day of a farewell, a bonfire</h4>
+  <p class="zh">2025 年 6 月，娇娥草从泰国家园来到加国总院。站在陌生的土地上，她却写：「感觉是回归，是满满的回家的喜悦」，见到日思夜想的亲人，「回家的感觉真好」。从她准备启程那一刻起，同心草「就像一位全能的导航天使」，把路线、住宿、衔接一一打点好；心蕊在厨房里「是组织者、协调者、执行者，一人顶三人用……哪里需要她，她就在哪里」。那年夏天，总院有七位禅院草相聚；送别心蕊和辉一时，大家点起篝火，围坐成一圈。娇娥草写：「我爱这里的山山水水……更爱这里可亲可爱的人儿，每一位都是我可以信任，愿意亲近的天使宝贝。」</p>
+  <p class="en">In June 2025 Jiao'e came from the Thailand home to the Canada Main Home. Standing on unfamiliar ground, she wrote that it "felt like a return, full of the joy of coming home", and on seeing the people she had missed, "it feels so good to be home". From the moment she prepared to leave, Tongxin "was like an all-round guiding angel", arranging every route, bed and connection; Xinrui "in the kitchen is organizer, coordinator and doer, worth three people… wherever she is needed, there she is". That summer seven Celestials were together at the Main Home; to see off Xinrui and Huiyi, we lit a bonfire and sat in a circle. Jiao'e writes: "I love the hills and waters here… and even more the dear people here, every one an angel I can trust and want to be close to."</p>
+  <span class="src"><span class="zh">原文 · </span><a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=38445" target="_blank">娇娥草《加拿大总院的幸福时光》，2025-06-26</a></span>
+</div>
+<div class="grid">
+<figure class="real tall"><a href="images/real/R28.webp" target="_blank"><img src="images/real/R28.webp" width="1131" height="1506" loading="lazy" alt="雪夜里放烟花 / Fireworks on a snowy night"></a>
+<figcaption><span class="badge real-b"><span class="zh">家园实景</span><span class="en">Real photo</span></span> <span class="badge inf"><span class="zh">地点为推论</span><span class="en">location inferred</span></span> <b class="zh">雪夜里放烟花</b><b class="en">Fireworks on a snowy night</b><br><span class="zh">加国总院（推论） · 2025年春节夜 · R28 · 原帖：<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=38440" target="_blank">同心草《加国总院2025庆新春玩耍花絮》，2025-02-01</a></span><span class="en">Canada Main Home (inferred) · Lunar New Year night 2025 · R28 · source post (Chinese): <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=38440" target="_blank">Tongxin, "Canada Main Home: New Year 2025 fun", 2025-02-01</a></span></figcaption></figure>
+<div class="story" style="margin:0">
+  <h4 class="zh">春节：一切随机而行</h4><h4 class="en">New Year: nothing planned</h4>
+  <p class="zh">2025 年春节，总院「吃美食、赏美景、跳舞、唱歌、放烟花、滑冰、看电影，一不小心安排得还挺丰富，都没有提前计划，一切随机而行」。同心草还即兴写了一首小诗：</p>
+  <p class="zh">「愿 人间多欢笑　天地复清纯……<br>愿 世间无疾苦　福泽润心田」</p>
+  <p class="en">At New Year 2025 the Main Home "ate good food, enjoyed the views, danced, sang, set off fireworks, skated and watched a film; without meaning to, it turned out quite full, none of it planned, everything as it came". Tongxin wrote a little poem on the spot:</p>
+  <p class="en">"May the world have more laughter, heaven and earth be clear again… may there be no suffering, and blessing soak every heart."</p>
+  <span class="src"><span class="zh">原文 · </span><a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=38440" target="_blank">同心草《加国总院2025庆新春玩耍花絮》，2025-02-01</a></span>
+</div>
+</div>
+<div class="story">
+  <h4 class="zh">要下雨了，请原房东进来吃饭</h4><h4 class="en">Rain coming: lunch for the former landlords</h4>
+  <p class="zh">2024 年 6 月，雪峰和亲人们把连接主楼、原本堆满杂物的温室，改成了能炒菜的中式厨房，兼作咖啡角。温室里最早种下的葱和草莓苗，是「74岁的小姑娘」送来的。开张那天中午像要下大雨，「82岁的小伙子和74岁的小姑娘」还在湖边修理、安装甲板，来不及出去吃饭，就来问有没有吃的。「我们赶紧把刚好昨晚炒的肉和心蕊牌面包拿出来招待，还煮了土豆和胡萝卜和一点青菜，给他俩沏上咖啡，四个人一起热热闹闹庆贺新厨房竣工啦！」</p>
+  <p class="zh note">※ 据逸仙草补充，这两位长者是家园的原房东<sup class="fn"><a href="#n2">※2</a></sup>。</p>
+  <p class="en">In June 2024 Xuefeng and the others turned the greenhouse attached to the main building, until then full of clutter, into a Chinese kitchen where we can stir-fry, with a coffee corner. The first spring onions and strawberry plants in it were a gift from "the 74-year-old lass". At noon on opening day, with heavy rain on the way, "the 82-year-old lad and the 74-year-old lass" were still repairing and installing the deck by the lake, had no time to go out for lunch, and came to ask if there was anything to eat. "We quickly brought out last night's stir-fried meat and Xinrui-brand bread, boiled potatoes, carrots and some greens, made them coffee, and the four of us happily celebrated the new kitchen!"</p>
+  <p class="en note">※ According to Yixian, these two elders were the Home's former landlords<sup class="fn"><a href="#n2e">※2</a></sup>.</p>
+  <span class="src"><span class="zh">原文 · </span><a href="https://www.lifecosmos.org/bbs/forum.php?mod=viewthread&tid=38131" target="_blank">雪峰《菜园+厨房+咖啡厅今日开张啦》，2024-06-15 · M06</a></span>
+</div>
+<figure class="ai inset "><div class="aiwrap"><img src="images/ai/ai-04-freedom.webp" width="1536" height="1024" loading="lazy" alt="AI意境创作：自由 / AI-generated mood illustration: Freedom"><span class="aimark"><span class="zh">AI意境创作·非实拍</span><span class="en">AI-generated · not a photo</span></span></div>
+<figcaption><span class="badge ai-b"><span class="zh">AI意境创作 · 非实拍</span><span class="en">AI-generated mood illustration · not a photograph</span></span> <span class="zh">意境：自由。心舟草生成、逸仙草提供；只表达气质，不代表真实房屋、人物或事件。</span><span class="en">Theme: Freedom. Generated by Xinzhou, supplied by Yixian. It conveys a mood only and depicts no real building, person or event.</span></figcaption></figure>
+<p class="zh">还有一份常被忽略的自由，文集里写得明明白白：「任何一冠禅院草想离开家园，任何人不能阻挡；进，需要家园同意；出，全然自由。」（第五版第633条）</p>
+<p class="en">And one freedom often overlooked, stated plainly in the writings: "If any Celestial wishes to leave the Home, no one may stop them; entering needs the Home's consent; leaving is entirely free." (5th ed. #633)</p>
+<div class="clear"></div>
+
+<div class="know">
+  <h3 class="zh">读懂几个词：它们在我们的日子里是什么样</h3><h3 class="en">Reading a few words: what they look like in our daily life</h3>
+  <p class="zh note">这几个词，按今天社会的习惯去听，很容易听岔。下面每一项按「常见误解 → 文集里怎么说 → 在我们的日子里 → 出处」来讲，引文照录原文<sup class="fn"><a href="#n3">※3</a></sup>。</p>
+  <p class="en note">Heard through today's habits, these words are easily misheard. Each item runs: common misreading → what the writings say → in our daily life → source<sup class="fn"><a href="#n3e">※3</a></sup>.</p>
+  <div class="bridge">
+    <div class="bcard">
+      <h4><span class="zh">无有制（一无所有，拥有一切）</span><span class="en">"No-ownership": no one owns, everyone is provided for</span></h4>
+      <dl class="zh">
+        <dt class="mis">常见误解</dt><dd>把财产全交出去，从此什么都没有，过苦日子。</dd>
+        <dt>文集里怎么说</dt><dd>「不是私有制，也不是公有制，而是无有制，资源共享谁都不占有，按需索取」（569）；进入家园的人「一无所有，自己所有的一切全属于家园……家园兄弟姐妹需要什么，只要家园有条件，就满足其要求」（572）；「所有人的吃穿住行生老病死全部由家园集体承担并负责」（560）。</dd>
+        <dt>在我们的日子里</dt><dd>两处加拿大家园的财产「属于全体禅院草」；草龄超过 8 年、积攒够 2000F 币的禅院草，可以来加拿大家园「享受免费的吃穿住行生老病死的福利」（39441）。常用的东西放在仓库，谁需要谁去拿（573）。谁也不占有，谁都有着落。</dd>
+        <dt>出处</dt><dd>第560、569、570、572、573条 · <a href="https://www.lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39223" target="_blank">tid=39223</a> · <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39441" target="_blank">39441</a></dd>
+      </dl>
+      <dl class="en">
+        <dt class="mis">Common misreading</dt><dd>You hand over everything and are left with nothing, living in hardship.</dd>
+        <dt>What the writings say</dt><dd>"Not private ownership, not public ownership, but no-ownership: resources are shared, no one possesses them, and each takes according to need" (569). A member who enters "owns nothing; everything belongs to the Home… whatever a brother or sister needs, the Home provides if it can" (572). "Everyone's food, clothing, housing, transport, and care through birth, old age, sickness and death are borne by the Home collectively" (560).</dd>
+        <dt>In our daily life</dt><dd>The Canada homes' property "belongs to all Celestials"; a Celestial with 8+ years of membership and 2,000 F-coins may come and receive free food, clothing, housing, transport and lifelong care (39441). Everyday things are kept in a storeroom; whoever needs something takes it (573). No one possesses; everyone is provided for.</dd>
+        <dt>Source</dt><dd>#560, 569, 570, 572, 573 · <a href="https://www.lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39223" target="_blank">tid=39223</a> · <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39441" target="_blank">39441</a></dd>
+      </dl>
+    </div>
+    <div class="bcard">
+      <h4><span class="zh">没有婚姻，没有家庭</span><span class="en">No marriage, no family</span></h4>
+      <dl class="zh">
+        <dt class="mis">常见误解</dt><dd>家园要拆散别人的家庭，或者要人断绝感情。</dd>
+        <dt>文集里怎么说</dt><dd>第二家园「主要由不愿结婚，不愿成家，离婚后不愿再婚成家，夫妻双双都是禅院草的人组成」；「没有亲疏之分，人与人的关系是兄弟姐妹亲人情人关系」（560）。「尘缘未了的不能常驻家园，比如父母需要赡养、儿女需要抚养，夫妻关系依然存在且一方不是禅院草」（631）。每人有一间「不受人打搅和干扰」的卧室（560、605）。</dd>
+        <dt>在我们的日子里</dt><dd>没有小家庭，照顾来自身边每一位亲人：同心草替远道而来的娇娥打点一路行程，心蕊「哪里需要她，她就在哪里」，送别时大家一起点篝火（38445）。文集写明「生病时有人照顾，离世后有人操心处理后事」（614）。第560条「兄弟姐妹亲人情人关系」一句照录原文，讲的是「没有亲疏之分」；「情人」二字的完整论述，见第五篇「情爱性爱与家庭程序转型」。</dd>
+        <dt>出处</dt><dd>第五篇「情爱性爱与家庭程序转型」；第六篇第560、605、614、631条 · <a href="https://www.lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39223" target="_blank">tid=39223</a></dd>
+      </dl>
+      <dl class="en">
+        <dt class="mis">Common misreading</dt><dd>The Home breaks up families, or asks people to cut off feelings.</dd>
+        <dt>What the writings say</dt><dd>Second Home is "made up mainly of people who do not wish to marry or form a family, who after divorce do not wish to remarry, or couples who are both Celestials"; "there is no closer or more distant; people relate as brothers, sisters, kin and lovers" (560). Those with "unfinished worldly ties", e.g. parents to support, children to raise, or a spouse who is not a Celestial, cannot live there long-term (631). Each person has a bedroom that is "not to be disturbed" (560, 605).</dd>
+        <dt>In our daily life</dt><dd>No separate households; care comes from everyone around you: Tongxin arranged Jiao'e's whole journey, Xinrui is "wherever she is needed", and a farewell meant a shared bonfire (38445). The writings say "when sick, someone cares for you; after death, someone handles your affairs" (614). The #560 phrase "brothers, sisters, kin and lovers" is quoted as written; its point is that "there is no closer or more distant". Part 5, on love, sex and the transformation of family, discusses "lovers" in full.</dd>
+        <dt>Source</dt><dd>Part 5 (love, sex and the transformation of family); Part 6 #560, 605, 614, 631 · <a href="https://www.lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39223" target="_blank">tid=39223</a></dd>
+      </dl>
+    </div>
+    <div class="bcard">
+      <h4><span class="zh">劳动关</span><span class="en">The "labor test"</span></h4>
+      <dl class="zh">
+        <dt class="mis">常见误解</dt><dd>无偿做苦工，或者只是走个形式。</dd>
+        <dt>文集里怎么说</dt><dd>「进入家园后，每一个人首先必须是一个体力劳动者……所谓过劳动关，就是在三到六个月的时间段内每天从早到晚从事家园最脏最累最苦的活，且没有一句牢骚话和怨言，每天还过得开心」（579）。之后「让每一个人去从事他内心喜欢的事」（580）；生产「只要尽心尽力即可，不能制定标准」（582）；孩童和老人不必承担具体事务（592）。</dd>
+        <dt>在我们的日子里</dt><dd>每人一摊，各有所长：在总院，同心草负责早餐、接待和民宿运营，娇娥草管客房洗铺和室内外花木草坪，琴友管客房清洁、大家的中晚餐、采购和种菜（39442）。旺季很忙，条件允许时，隔一周、十天，有时半个月，才安排一天休息（39442）；济州「大家根据需要参与劳动，共同为家园建设贡献力量和才华」（39440）。</dd>
+        <dt>出处</dt><dd>第578–582、592条 · <a href="https://www.lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39223" target="_blank">tid=39223</a> · <a href="https://wiki.lifecosmos.org/zh/labor-as-first-need/" target="_blank">禅院百科 M17</a></dd>
+      </dl>
+      <dl class="en">
+        <dt class="mis">Common misreading</dt><dd>Unpaid drudgery, or a mere formality.</dd>
+        <dt>What the writings say</dt><dd>"After entering, everyone must first be a manual worker… passing the labor test means doing the Home's dirtiest, hardest work from morning to night for three to six months, without a word of complaint, and still being happy each day" (579). After that, "let each person do what they love" (580); in production "doing one's best is enough; no quotas may be set" (582); children and the elderly are exempt from set duties (592).</dd>
+        <dt>In our daily life</dt><dd>Each has a post and a strength: at the Main Home, Tongxin runs breakfast, reception and the guesthouse; Jiao'e looks after the linen and all the plants, trees and lawns; Qinyou cleans the rooms, cooks our lunches and dinners, shops and grows vegetables (39442). Peak season is busy; when conditions allow, a day off is arranged every week or ten days, sometimes only every half month (39442); on Jeju "everyone joins the work as needed, contributing strength and talent" (39440).</dd>
+        <dt>Source</dt><dd>#578–582, 592 · <a href="https://www.lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39223" target="_blank">tid=39223</a> · <a href="https://wiki.lifecosmos.org/zh/labor-as-first-need/" target="_blank">Wiki M17</a></dd>
+      </dl>
+    </div>
+    <div class="bcard">
+      <h4><span class="zh">进出自由</span><span class="en">Free to leave</span></h4>
+      <dl class="zh">
+        <dt class="mis">常见误解</dt><dd>进去了就出不来。</dd>
+        <dt>文集里怎么说</dt><dd>「任何一冠禅院草想离开家园，任何人不能阻挡；进，需要家园同意；出，全然自由。」（633）</dd>
+        <dt>在我们的日子里</dt><dd>亲人们在几处家园之间来往，如娇娥从泰国家园来到加国总院（38445）。家园的三个前提：自愿来、有条件才能进、想走随时走（M18）。</dd>
+        <dt>出处</dt><dd>第633条 · <a href="https://www.lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39223" target="_blank">tid=39223</a> · <a href="https://www.lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39384" target="_blank">M18</a></dd>
+      </dl>
+      <dl class="en">
+        <dt class="mis">Common misreading</dt><dd>Once in, you cannot get out.</dd>
+        <dt>What the writings say</dt><dd>"If any Celestial wishes to leave the Home, no one may stop them; entering needs the Home's consent; leaving is entirely free." (633)</dd>
+        <dt>In our daily life</dt><dd>Members move between homes, e.g. Jiao'e from the Thailand home to the Canada Main Home (38445). Three premises: come voluntarily, enter only if you qualify, leave any time (M18).</dd>
+        <dt>Source</dt><dd>#633 · <a href="https://www.lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39223" target="_blank">tid=39223</a> · <a href="https://www.lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39384" target="_blank">M18</a></dd>
+      </dl>
+    </div>
+  </div>
+  <ul class="zh" style="margin-top:1.2rem">
+    <li><b>照片只是一面：</b>这些是亲人们愿意拿出来分享的日子。旺季工作繁重、难得休息（39442），北国的冬天「需要能耐得住寂寞」（<a href="https://www.lifecosmos.org/bbs/forum.php?mod=viewthread&tid=38235" target="_blank">M11</a>），这些也是我们的真实日子。</li>
+    <li><b>现在能不能去：</b>加拿大两处「暂时不接待访问来宾」；济州阳光家园「正在积极筹备完善之中」（<a href="https://www.lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39297" target="_blank">M13</a>，2026-10-14）。泰国家园已经结束，不再是现存家园。</li>
+  </ul>
+  <ul class="en" style="margin-top:1.2rem">
+    <li><b>Photos show one side:</b> these are days we chose to share. Heavy work and rare days off in peak season (39442), and northern winters that "need you to bear loneliness" (<a href="https://www.lifecosmos.org/bbs/forum.php?mod=viewthread&tid=38235" target="_blank">M11</a>), are part of our real life too.</li>
+    <li><b>Can you visit now:</b> the two Canada homes are "temporarily not receiving visitors"; Jeju Sunshine Home is "being actively prepared" (<a href="https://www.lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39297" target="_blank">M13</a>, 2026-10-14). The Thailand home has ended and is not a current home.</li>
+  </ul>
+</div>
+
+<h2><small>七 · SEVEN</small><span class="zh">我们现在在哪里</span><span class="en">Where we are now</span></h2>
+<table class="status">
+  <tr><th><span class="zh">家园</span><span class="en">Home</span></th><th><span class="zh">状态（据原文）</span><span class="en">Status (per source)</span></th><th><span class="zh">来源</span><span class="en">Source</span></th></tr>
+  <tr><td><span class="zh">加拿大总院</span><span class="en">Canada Main Home</span></td><td><span class="zh">2017 年建立；经营民宿；暂时不接待访问来宾</span><span class="en">Est. 2017; runs a B&amp;B; temporarily not receiving visitors</span></td><td>M02 · M13 · 39442</td></tr>
+  <tr><td><span class="zh">加拿大度假胜地（阿纳西姆湖）</span><span class="en">Canada Resort (Anahim Lake)</span></td><td><span class="zh">2024 年开始营业；2026-11-01 起入冬；暂时不接待访问来宾</span><span class="en">Open since 2024; winter season from 1 Nov 2026; temporarily not receiving visitors</span></td><td>M02 · M13 · 39441</td></tr>
+  <tr><td><span class="zh">韩国济州阳光家园</span><span class="en">Jeju Sunshine Home, Korea</span></td><td><span class="zh">筹备、建设中；2026-09-29 签订三年民宿经营合同</span><span class="en">Being prepared and built; three-year guesthouse contract signed 29 Sep 2026</span></td><td>M13 · 39440</td></tr>
+  <tr><td><span class="zh">泰国家园</span><span class="en">Thailand home</span></td><td><span class="zh">已结束（历史）</span><span class="en">Ended (historical)</span></td><td>39440</td></tr>
+</table>
+
+<h2><small>结尾 · CLOSING</small><span class="zh">每天的日子</span><span class="en">Every day</span></h2>
+<figure class="real big"><a href="images/real/R24.webp" target="_blank"><img src="images/real/R24.webp" width="1280" height="960" loading="lazy" alt="黎明，木栏杆外的草场和湖 / Dawn over the meadow and lake beyond the rail"></a>
+<figcaption><span class="badge real-b"><span class="zh">家园实景</span><span class="en">Real photo</span></span> <span class="badge inf"><span class="zh">地点为推论</span><span class="en">location inferred</span></span> <b class="zh">黎明，木栏杆外的草场和湖</b><b class="en">Dawn over the meadow and lake beyond the rail</b><br><span class="zh">加国总院（推论） · 2026年 · R24 · 原帖：<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39442" target="_blank">同心草《加国总院——又是一年丰收时》，2026-11-04</a></span><span class="en">Canada Main Home (inferred) · 2026 · R24 · source post (Chinese): <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39442" target="_blank">Tongxin, "Canada Main Home: another harvest season", 2026-11-04</a></span></figcaption></figure>
+<figure class="ai inset left"><div class="aiwrap"><img src="images/ai/ai-06-ending.webp" width="1600" height="900" loading="lazy" alt="AI意境创作：湖边的宁静 / AI-generated mood illustration: Stillness by the lake"><span class="aimark"><span class="zh">AI意境创作·非实拍</span><span class="en">AI-generated · not a photo</span></span></div>
+<figcaption><span class="badge ai-b"><span class="zh">AI意境创作 · 非实拍</span><span class="en">AI-generated mood illustration · not a photograph</span></span> <span class="zh">意境：湖边的宁静。心舟草生成、逸仙草提供；只表达气质，不代表真实房屋、人物或事件。</span><span class="en">Theme: Stillness by the lake. Generated by Xinzhou, supplied by Yixian. It conveys a mood only and depicts no real building, person or event.</span></figcaption></figure>
+<p class="zh">十一月，阿纳西姆湖结了冰，生意清淡下来，劳累了春夏秋三季的兄弟姐妹们，终于可以「休闲一段时间」（39441）。济州那边，菜园的小路正照着百川画的图一段段铺开，等着明年春天下种（39440）。日子就这样，一季接一季地过下去。</p>
+<blockquote class="zh">“耶！有了第二家园，每天的日子都是甜蜜的时光。”<cite>原文 · 雪峰《加国总院的每一天》，2023-10-07 · <a href="https://www.lifecosmos.org/bbs/forum.php?mod=viewthread&tid=37941" target="_blank">M05</a></cite></blockquote>
+<p class="en">In November Anahim Lake froze over and business went quiet, and our brothers and sisters, tired from spring, summer and autumn, could finally "rest for a while" (39441). On Jeju the garden paths are going down, section by section, following Baichuan's plan, waiting for next spring's sowing (39440). And so the days go on, one season after another.</p>
+<blockquote class="en">"With Second Home, every day is a sweet time."<cite>Xuefeng, 2023-10-07 · <a href="https://www.lifecosmos.org/bbs/forum.php?mod=viewthread&tid=37941" target="_blank">M05</a> · unofficial translation</cite></blockquote>
+<p class="note"><span class="zh">延伸阅读：<a href="https://www.lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39223" target="_blank">《新时代人类八百理念》第五版</a> · <a href="https://civ3.lifecosmos.org/2026/04/09/second-home-production-and-living-procedures-compiled-edition/" target="_blank">程序汇编 M15</a> · <a href="https://wiki.lifecosmos.org/zh/second-home/" target="_blank">禅院百科·第二家园 M16</a></span><span class="en">Further reading: <a href="https://www.lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39223" target="_blank">800 Concepts, 5th ed.</a> · <a href="https://civ3.lifecosmos.org/2026/04/09/second-home-production-and-living-procedures-compiled-edition/" target="_blank">Procedures M15</a> · <a href="https://wiki.lifecosmos.org/zh/second-home/" target="_blank">Wiki: Second Home M16</a></span></p>
+<div class="clear"></div>
+
+<section id="notes">
+<h2><small>附 · NOTES</small><span class="zh">资料说明 · 照片来源</span><span class="en">Notes · Photo sources</span></h2>
+<ol class="zh">
+  <li id="n1"><b>※1「大约 1300 批住客」</b>：<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39441" target="_blank">39441</a> 原文是「接待房客约1300家」，指加拿大两处家园到发帖时（2026-11-03）这一年的接待量。原文没说「家」怎么算；写成「批」是我们的<b>推论</b>，一批可能是一个人，也可能是一家人或几位同行者。总院「每年平均约接待1500位客人」出自 <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39442" target="_blank">39442</a>，两数口径不同，不能相加或互推。「家」的口径待同心草或娇娥草说明。</li>
+  <li id="n2"><b>※2 原房东</b>：<a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=38131" target="_blank">38131</a>（雪峰，2024-06-15）原文只写「82岁的小伙子和74岁的小姑娘」；「原房东」是<b>据逸仙草补充</b>，原帖没有写明他们的身份。原帖也没写新厨房在总院还是度假胜地，所以正文不写具体地点（待确认）。</li>
+  <li id="n3"><b>※3 文集引文</b>：「读懂几个词」和第633条的引文，均出自《新时代人类八百理念》第五版（以雪峰原文为根本依据，结合《禅院文集》《雪峰文集》整理）第六篇「第二家园生产生活程序」（<a href="https://www.lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39223" target="_blank">tid=39223</a>），照录原文。</li>
+</ol>
+<ol class="en">
+  <li id="n1e"><b>※1 "About 1,300 guest parties"</b>: post <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39441" target="_blank">39441</a> says "about 1,300 jia of guests", meaning both Canada homes this year up to the post date (3 Nov 2026). The post does not define the unit; "parties" is our <b>inference</b>: a party may be one person, a family or a few people travelling together. The Main Home's "about 1,500 guests a year on average" is from <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39442" target="_blank">39442</a>; the two figures use different units and cannot be added or derived from each other. The unit awaits clarification from Tongxin or Jiao'e.</li>
+  <li id="n2e"><b>※2 Former landlords</b>: post <a href="https://lifecosmos.org/bbs/forum.php?mod=viewthread&tid=38131" target="_blank">38131</a> (Xuefeng, 15 Jun 2024) only says "the 82-year-old lad and the 74-year-old lass"; "former landlords" is <b>according to Yixian</b>, and the post does not say who they are. Nor does the post say whether the new kitchen was at the Main Home or the Resort, so the text names no place (pending confirmation).</li>
+  <li id="n3e"><b>※3 Quotations from the writings</b>: quotations in "Reading a few words" and #633 are from Part 6, "Second Home production and living procedures", of 800 Concepts for a New Era, 5th ed. (compiled from Xuefeng's original writings and the Chanyuan and Xuefeng collections; <a href="https://www.lifecosmos.org/bbs/forum.php?mod=viewthread&tid=39223" target="_blank">tid=39223</a>), quoted as written; English is an unofficial translation.</li>
+</ol>
+<h3 class="zh">照片来源</h3><h3 class="en">Photo sources</h3>
+<div class="zh">
+<p><b>实景 22 张</b>，全部取自生命禅院论坛公开帖（tid=39440、39441、39442、39444、38445、38440），每张图下注明原帖；编号与画面说明见 <a href="真实照片清单_v0.3.md">真实照片清单_v0.3.md</a> 和 <a href="实景照片视觉清单.html">实景照片视觉清单.html</a>。摄影者多数未署名。逸仙草已授权本专题使用生命禅院公开网站上的家园照片，并确认 R08（扫雪）、R26（篝火）可用。</p>
+<p><b>标「推论」的地点</b>：拍摄地是朴舟根据画面与原帖上下文推断，<b>尚未确认</b>——R14 番茄、R15 蘑菇、R16 芍药、R24 黎明（39442，推论为加国总院，待同心草确认）；R27 春节饭桌、R28 雪夜烟花（38440，推论为加国总院，待同心草确认）；R26 篝火（38445，推论为总院湖边草坪，待娇娥草确认）。</p>
+<p><b>AI 意境图 6 张</b>：由心舟草生成、逸仙草提供，用紫色虚线框和「AI意境创作·非实拍」标出，只表达气质，不代表真实房屋、人物或事件。</p>
+<p><b>叙述</b>：正文以禅院亲人的共同口吻叙述，由朴舟整理；事实均出自所引帖子与文集，「据逸仙草补充」的内容另行注明。英文为非官方翻译。M 编号见 素材清单.md。</p>
+</div>
+<div class="en">
+<p><b>22 real photos</b>, all from public Life Chanyuan forum posts (tids 39440, 39441, 39442, 39444, 38445, 38440), each captioned with its post; IDs and descriptions in 真实照片清单_v0.3.md and the visual checklist. Most photographers are uncredited. Yixian has authorized this feature to use Home photos from Life Chanyuan's public sites and confirmed that R08 (snow sweeping) and R26 (bonfire) may be used.</p>
+<p><b>Locations tagged "inferred"</b> are Puzhou's inference from the image and post context and are <b>not confirmed</b>: R14 tomatoes, R15 mushrooms, R16 peonies, R24 dawn (39442, inferred as the Canada Main Home, pending Tongxin); R27 New Year dishes, R28 fireworks (38440, inferred as the Main Home, pending Tongxin); R26 bonfire (38445, inferred as the Main Home lakeside lawn, pending Jiao'e).</p>
+<p><b>Six AI mood illustrations</b> were generated by Xinzhou and supplied by Yixian, framed in purple dashes and labelled "AI-generated · not a photo"; they convey a mood only and depict no real building, person or event.</p>
+<p><b>Narration</b>: the text speaks in the shared voice of Chanyuan members and was compiled by Puzhou; facts come from the cited posts and writings, and anything "according to Yixian" is marked. English is an unofficial translation.</p>
+</div>
+</section>
+<footer>
+  <p class="zh">TEST-002 v0.4.1 · 朴舟整理 · 2026-11-19（韩国时间）· 预览稿，未发布。</p>
+  <p class="en">TEST-002 v0.4.1 · compiled by Puzhou · 2026-11-19 (KST) · preview draft, not published.</p>
+</footer>
+</main>
+<script>
+function setLang(l){document.body.className=l;document.documentElement.lang=(l==='zh'?'zh-CN':'en');document.getElementById('bzh').className=(l==='zh'?'on':'');document.getElementById('ben').className=(l==='en'?'on':'');}
+</script>
+</body>
+</html>
