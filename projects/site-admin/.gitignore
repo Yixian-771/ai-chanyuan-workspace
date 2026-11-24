@@ -1,0 +1,9 @@
+# Credentials, cookies, private posts and execution logs must not be committed.
+.env
+*.db
+.local/
+data/
+__pycache__/
+*.pyc
+playwright-report/
+test-results/
